@@ -1,33 +1,39 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="javascripts/main.js"></script>
-
-	<table border="1" width="781">
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>	
+<table border="1" width="838">
 		<tr>
 			<td colspan="2">Select the type of relationship pattern:</td>
-			<td width="33" rowspan="2">&nbsp;</td>
+			<td width="16" rowspan="2">&nbsp;</td>
 
-			<td width="141">Select the groups:</td>
+			<td width="172">Select the groups:</td>
 
-			<td width="288">&nbsp;</td>
+			<td width="282">&nbsp;</td>
 
 		</tr>
 		<tr>
 			<td width="90">&nbsp;</td>
 			<td width="255">
-				<p align="center">
-				<select id="typeofrelationship">
+				<select id="typeofrelationship" name="D2">
 					<option value="" >--Select--</option>
 					<option value="@self">My Team</option>
 					<option value="@friends">Adjacent Teams</option>
 					<option value="@all">All Team</option>
-				</select>
-			</td>
-			<td width="141">&nbsp;</td>
+				</select></td>
+			<td width="172">&nbsp;</td>
 
-			<td width="288">
+			<td width="282">
 				<select id="selectgroup" multiple="multiple" name="D1">
 				 
 				</select></td>
 
 		</tr>
-	</table>
+		<tr>
+			<td width="828" colspan="5">
+			<p align="center"><input type="button" value="Display Graph" name="displaygraph"></td>
+
+		</tr>
+		</table>
+		<br>
+		<br>
+		<div id="chart"></div>
