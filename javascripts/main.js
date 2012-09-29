@@ -104,9 +104,9 @@ try {
     			//.append("svg:g");
 
 		// d3.json("http://localhost:8080/JiveDataVizsWeb/jivegraph/dataviz/nodes", function(json) {
-	  	d3.json("mynodes2.json", function(json) {
+	  	//d3.json("mynodes2.json", function(json) {
 		
-		//var json = {"graphNodeDetails":{"links":[{"source":1,"target":0,"value":1},{"source":2,"target":0,"value":88},{"source":3,"target":0,"value":10},{"source":3,"target":2,"value":6},{"source":4,"target":0,"value":1},{"source":5,"target":0,"value":1},{"source":6,"target":0,"value":1},{"source":7,"target":0,"value":1},{"source":8,"target":0,"value":2},{"source":9,"target":8,"value":500},{"source":9,"target":10,"value":20}],"nodes":[{"group":1,"name":"Myriel","value":2},{"group":1,"name":"Napoleon","value":10},
+		var json = {"graphNodeDetails":{"links":[{"source":1,"target":0,"value":1},{"source":2,"target":0,"value":88},{"source":3,"target":0,"value":10},{"source":3,"target":2,"value":6},{"source":4,"target":0,"value":1},{"source":5,"target":0,"value":1},{"source":6,"target":0,"value":1},{"source":7,"target":0,"value":1},{"source":8,"target":0,"value":2},{"source":9,"target":8,"value":500},{"source":9,"target":10,"value":20}],"nodes":[{"group":1,"name":"Myriel","value":2},{"group":1,"name":"Napoleon","value":10},
 {"group":1,"name":"Mlle.Baptistine","value":2},{"group":1,"name":"Mme.Magloire","value":2},{"group":1,"name":"CountessdeLo","value":2},{"group":1,"name":"Geborand","value":2},{"group":11,"name":"Champtercier","value":21},{"group":1,"name":"Cravatte","value":41},{"group":4,"name":"Count","value":1},{"group":3,"name":"OldMan","value":2},{"group":2,"name":"Labarre","value":13}]}}
 
 	  	force
@@ -143,7 +143,7 @@ try {
 	    	node.attr("cx", function(d) { return d.x; })
 	        .attr("cy", function(d) { return d.y; });
 	  });
-	});
+	//});
 		 	
 		} catch(err) {
 			alert("Error" + err.message);
