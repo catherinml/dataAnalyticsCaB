@@ -1,6 +1,18 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="javascripts/main.js"></script>
-<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>	
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+  <style type="text/css"> 
+	circle.node {
+	  stroke: #fff;
+	  stroke-width: 1.5px;
+	}
+	
+	line.link {
+	  stroke: #999;
+	  stroke-opacity: .6;
+	}
+  </style>
+	
 <table border="1" width="838">
 		<tr>
 			<td colspan="2">Select the type of relationship pattern:</td>
@@ -30,7 +42,7 @@
 		</tr>
 		<tr>
 			<td width="828" colspan="5">
-			<p align="center"><input type="button" value="Display Graph" name="displaygraph"></td>
+			<p align="center"><input type="button" value="Display Graph" name="displaygraph" id="displaygraph"></td>
 
 		</tr>
 		</table>
