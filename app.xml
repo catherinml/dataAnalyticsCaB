@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module specificationVersion="1">
+  <ModulePrefs title="Accenture Team Collabration Pattern"
+               description="Display the Team relationship within 			a jive container"
+               author="Accenture"
+               author_affiliation="Accenture"
+               height="100">
+
+    <!-- Commonly used features -->
+    <Require feature="dynamic-height" />
+    <Require feature="jive-core-v2" />
+    <Require feature="osapi"/>
+    <Require feature="settitle"/>
+    <Require feature="views" />
+
+  </ModulePrefs>
+
+  <!-- To begin development, remove the hello view and uncomment the home and canvas views below -->
+  <Content type="html" view="home,canvas" href="displayrelgraph.html" />
+
+</Module>
