@@ -3,9 +3,11 @@
 gadgets.util.registerOnLoadHandler(function() {
 
   $("#typeofrelationship").change(function() {
+	
 	var typeID = $("#typeofrelationship").val();
 	$("#selectgroup").html("");
 	if (typeID == "@self" ) {
+	$("#grouptable").css("display","block");
 		osapi.groups.get({ 
 			userId : "@me", 
 			groupId : "@self", 
@@ -30,7 +32,7 @@ gadgets.util.registerOnLoadHandler(function() {
 			} 
 		});
 	} else if (typeID == "@all" ) {
-
+		$("#grouptable").css("display","block");
 		osapi.groups.get({ 
 			userId : "@me", 
 			groupId : "@all", 
@@ -55,6 +57,9 @@ gadgets.util.registerOnLoadHandler(function() {
 			} 
 		});
 	} // end else if
+	else {
+		$("#grouptable").css("display","none");
+	}
     });
 
 	
