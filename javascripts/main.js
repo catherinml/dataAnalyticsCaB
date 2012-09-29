@@ -4462,7 +4462,7 @@ var json = {"graphNodeDetails":
 	gadgets.window.adjustHeight();
 	$("#chart").html("");
 try {
-	var margin = {top: 200, right: 800, bottom: 400, left: 400},
+	var margin = {top: 200, right: 800, bottom: 400, left: 500},
 	    width = 960 - margin.left - margin.right,
 	    height = 500 - margin.top - margin.bottom;
 
