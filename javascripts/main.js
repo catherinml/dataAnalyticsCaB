@@ -103,10 +103,9 @@ try {
     			//.call(d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", 10))
     			//.append("svg:g");
 
-		alert("inside");
-	  	d3.json("mynodes2.json", function(json) {
+		d3.json("mynodes2.json", function(json) {
 		
-		alert("after");
+		alert("after" + json);
 
 
 	  	force
