@@ -67,7 +67,7 @@ gadgets.util.registerOnLoadHandler(function() {
 // Button click
 	$("#displaygraph").click(function() {
 	gadgets.window.adjustHeight();
-	alert("hello");
+	$("#chart").html("");
 try {
 	 	var margin = {top: 100, right: 800, bottom: 400, left: 100},
 	    	width = 960 - margin.left - margin.right,
