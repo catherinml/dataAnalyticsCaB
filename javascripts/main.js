@@ -25,8 +25,7 @@ gadgets.util.registerOnLoadHandler(function() {
 			         
         				});
 					 					$("#selectgroup").html(html);
-  					  					gadgets.window.adjustHeight();
-				}
+  					  									}
 			} 
 		});
 	} else if (typeID == "@all" ) {
@@ -50,7 +49,7 @@ gadgets.util.registerOnLoadHandler(function() {
 			         
         				});
 					 																								$("#selectgroup").html(html);
-  					  												gadgets.window.adjustHeight();
+  					  												
 				}
 			} 
 		});
@@ -66,7 +65,7 @@ gadgets.util.registerOnLoadHandler(function() {
 
 // Button click
 	$("#displaygraph").click(function() {
-	gadgets.window.adjustHeight();
+	
 	$("#chart").html("");
 try {
 	 	var margin = {top: 100, right: 800, bottom: 400, left: 100},
@@ -143,7 +142,6 @@ try {
 		} catch(err) {
 			alert("Error" + err.message);
 		}
-gadgets.window.adjustHeight();
 
  	});
 
