@@ -20,10 +20,12 @@ gadgets.util.registerOnLoadHandler(function() {
 					var groups = response.list; 
 					var html = "";
 										$(groups).each(function(index, group) 					{
+						alert(group.id);
+						alert(group.name);
 						html += "<option value=" + group.id + ">" + group.name + "</option>";
 			         
         				});
-					
+					alert(html);
  					$("#selectgroup").html(html);
   					  					gadgets.window.adjustHeight();
 				}
