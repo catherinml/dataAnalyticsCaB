@@ -13,36 +13,42 @@
 	}
   </style>
 	
-<table border="1" width="838">
+	<table border="1" width="838">
 		<tr>
 			<td colspan="2">Select the type of relationship pattern:</td>
 			<td width="16" rowspan="2">&nbsp;</td>
 
-			<td width="172">Select the groups:</td>
-
-			<td width="282">&nbsp;</td>
+			<td width="454" rowspan="2">
+			<table border="1" width="100%" style="display:none" id="grouptable">
+				<tr>
+					<td colspan="2">Select the Group</td>
+				</tr>
+				<tr>
+					<td width="26%">&nbsp;</td>
+					<td width="70%">
+						<select id="selectgroup" multiple="multiple" name="D1">
+				 
+					</select>
+					</td>
+				</tr>
+			</table>
+			</td>
 
 		</tr>
 		<tr>
-			<td width="90">&nbsp;</td>
-			<td width="255">
+			<td width="101">&nbsp;</td>
+			<td width="241">
 				<select id="typeofrelationship" name="D2">
 					<option value="" >--Select--</option>
 					<option value="@self">My Team</option>
-					<option value="@friends">Adjacent Teams</option>
+					<option value="@selected">Adjacent Teams</option>
 					<option value="@all">All Team</option>
-				</select></td>
-			<td width="172">&nbsp;</td>
-
-			<td width="282">
-				<select id="selectgroup" multiple="multiple" name="D1">
-				 
 				</select></td>
 
 		</tr>
 		<tr>
-			<td width="828" colspan="5">
-			<p align="center"><input type="button" value="Display Graph" name="displaygraph" id="displaygraph"></td>
+			<td width="828" colspan="4">
+			<p align="center"><input type="button" value="Display Graph" name="displaygraph"></td>
 
 		</tr>
 		</table>
