@@ -65,7 +65,7 @@ gadgets.util.registerOnLoadHandler(function() {
 
 
 // Button click
-	$("#typeofrelationship").click(function() {
+	$("#displaygraph").click(function() {
 try {
 	 	var margin = {top: 100, right: 800, bottom: 400, left: 100},
 	    	width = 960 - margin.left - margin.right,
