@@ -141,6 +141,8 @@ try {
 		} catch(err) {
 			alert("Error" + err.message);
 		}
+gadgets.window.adjustHeight();
+
  	});
 
  });
