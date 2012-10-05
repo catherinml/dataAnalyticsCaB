@@ -13,13 +13,20 @@
 	}
   </style>
 	
-	<table border="0" width="838">
+	<table border="0" width="100%">
 		<tr>
-			<td colspan="2"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Select the type of relationship pattern:</span></td>
-			<td width="16" rowspan="2">&nbsp;</td>
+			<td width="293"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Select the type of relationship pattern:</span></td>
+			<td width="158">
+				<select id="typeofrelationship" name="D2"  style='font:bold 13px serif;'>
+					<option value="" >--Select--</option>
+					<option value="@self">My Team</option>
+					<option value="@selected">Adjacent Teams</option>
+					<option value="@all">All Team</option>
+				</select></td>
+			<td width="81" rowspan="2">&nbsp;</td>
 
-			<td width="454" rowspan="2">
-			<table border="1" width="100%" style="display:none" id="grouptable">
+			<td width="556" rowspan="2">
+			<table border="0" width="115%" style="display:none" id="grouptable">
 				<tr>
 					<td colspan="2"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Select the Group:</span></td>
 				</tr>
@@ -36,22 +43,17 @@
 
 		</tr>
 		<tr>
-			<td width="101">&nbsp;</td>
-			<td width="241">
-				<select id="typeofrelationship" name="D2"  style='font:bold 13px serif;'>
-					<option value="" >--Select--</option>
-					<option value="@self">My Team</option>
-					<option value="@selected">Adjacent Teams</option>
-					<option value="@all">All Team</option>
-				</select></td>
+			<td width="450" colspan="2">&nbsp;</td>
 
 		</tr>
 		<tr>
 			<td width="828" colspan="4">
-			<p align="center"><input type="button" value="Display Graph" name="displaygraph" id="displaygraph"></td>
+			<p align="center">
+			<input type="button" value="Display Graph" name="displaygraph" id="displaygraph" style="float: left"></td>
 
 		</tr>
 		</table>
+
 		<br>
 		<br>
 		<div id="chart"></div>
