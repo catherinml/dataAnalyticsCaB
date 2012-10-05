@@ -19,7 +19,7 @@
   <Content type="html" view="home,canvas" href="displayrelgraph.html" />  -->
 
 
-  <Content type="html" view="home" href="displayrelgraph.html" />
-  <Content type="html" view="canvas" href="canvas.html" />
+  <Content type="html" view="home" href="canvas.html" />
+  <Content type="html" view="canvas" href="displayrelgraph.html" />
 
 </Module>
