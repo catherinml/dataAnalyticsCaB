@@ -4414,19 +4414,19 @@ var json = {"graphNodeDetails":
 												html += "<option value=" + group.id + ">" + group.title + "</option>";
 			         
         				});
-					 					$("#selectgroup").html(html);
+	$("#selectgroup").multiple = false;				 		$("#selectgroup").html(html);
   					  					gadgets.window.adjustHeight();
 				}
 			} 
 		});
-	} else if (typeID == "@all" ) {
+	} else if (typeID == "@selected" ) {
 		$("#grouptable").css("display","block");
 		osapi.groups.get({ 
 			userId : "@me", 
 			groupId : "@all", 
 			sortBy : "title", 
 			sortOrder : "ascending" ,
-			count : 10
+			count : 20
 		}).execute(function (response) { 
 			if (response.error) { 
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
@@ -4439,7 +4439,7 @@ var json = {"graphNodeDetails":
 																		html += "<option value=" + group.id + ">" + group.title + "</option>";
 			         
         				});
-					 																								$("#selectgroup").html(html);
+					 												$("#selectgroup").multiple = true;																		$("#selectgroup").html(html);
   					  												gadgets.window.adjustHeight();
 				}
 			} 
