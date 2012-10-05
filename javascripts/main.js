@@ -4460,7 +4460,7 @@ var json = {"graphNodeDetails":
 
 
 // Button click
-$("#displaygraph").click(function() {
+$("#displaygraph11").click(function() {
 	gadgets.window.adjustHeight();
 	$("#chart").html("");
 		var w = 1360,
