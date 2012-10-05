@@ -17,7 +17,7 @@
 <div id="chart"></div>
 
 	<script type="text/javascript">
-		alert("hello");	
+		
 		var w = 1360,
     	h = 700,
     	r = 5,
@@ -36,7 +36,7 @@
     		.attr('width', w )
 		    .attr('height', h )
 		    .attr('fill', 'white');
-
+		
 		function redraw() {
 			  console.log("here", d3.event.translate, d3.event.scale);
 			  svg.attr("transform",
