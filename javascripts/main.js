@@ -4414,12 +4414,14 @@ var json = {"graphNodeDetails":
 												html += "<option value=" + group.id + ">" + group.title + "</option>";
 			         
         				});
-	$("#selectgroup").multiple = false;				 		$("#selectgroup").html(html);
+	$('#selectgroup').attr('multiple',false);	
+	$("#selectgroup").html(html);
   					  					gadgets.window.adjustHeight();
 				}
 			} 
 		});
 	} else if (typeID == "@selected" ) {
+		$('#selectgroup').attr('multiple',true);	
 		$("#grouptable").css("display","block");
 		osapi.groups.get({ 
 			userId : "@me", 
@@ -4439,7 +4441,7 @@ var json = {"graphNodeDetails":
 																		html += "<option value=" + group.id + ">" + group.title + "</option>";
 			         
         				});
-					 												$("#selectgroup").multiple = true;																		$("#selectgroup").html(html);
+					 																													$("#selectgroup").html(html);
   					  												gadgets.window.adjustHeight();
 				}
 			} 
