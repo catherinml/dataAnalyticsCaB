@@ -4398,7 +4398,7 @@ var json = {"graphNodeDetails":
 	
 	$("#chart").html("");
 	
-	var margin = {top: 200, right: 300, bottom: 300, left: 300},
+	var margin = {top: 150, right: 300, bottom: 300, left: 300},
 	    w = 450 - margin.left - margin.right,
 	    h = 500 - margin.top - margin.bottom,
 	    r = 5,
