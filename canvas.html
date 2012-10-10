@@ -46,6 +46,8 @@
 
 
 		//d3.json("mynodes2.json", function(json) {
+			alert("me inside");
+			alert(json.graphNodeDetails.nodes);
 		
 		    var link = svg.selectAll("line")
 		    .data(json.graphNodeDetails.links)
