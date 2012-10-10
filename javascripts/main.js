@@ -4597,10 +4597,10 @@ gadgets.window.adjustHeight();
 
 
 	$("#getdata").click(function() {
-		gadgets.window.adjustHeight();
+		
 		$("#chart").html("");
 		$("#graphdata").css("display","block");
-
+		gadgets.window.adjustHeight();
 	});
 	
 	
