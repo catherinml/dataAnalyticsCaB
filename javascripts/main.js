@@ -4605,10 +4605,15 @@ gadgets.window.adjustHeight();
 	
   $("#fromnode").click(function() {
     var callback = function(response) {
+	alert(response);
       var users = getUsersFromResponse(response);
       renderUserTable(users);
     }
-    osapi.jive.core.users.requestPicker({success: callback, multiple: false});
+    osapi.jive.core.users.requestPicker({success: callback, 	multiple: false,
+	error: function(error) {
+		alert(error);
+	}
+});
   });
 
 });
