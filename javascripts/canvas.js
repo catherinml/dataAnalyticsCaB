@@ -4398,7 +4398,7 @@ var json = {"graphNodeDetails":
 alert("hello");
 	
 	$("#chart").html("");
-		var w = 1360,
+	var w = 400,
     	h = 700,
     	r = 5,
     	fill = d3.scale.category20();
