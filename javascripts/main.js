@@ -4656,7 +4656,7 @@ function renderUserTable(users) {
     var user = users[i];
     content += "<tr>"
     content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' + "</td>";
-	content+= ="<td> <div id="jive-userbar-user-avatar"> <@jive.userAvatar user"+user +" size=25 /> </div></td>";
+	content+= "<td> <div id="jive-userbar-user-avatar"> <@jive.userAvatar user"+user +" size=25 /> </div></td>";
 						    		  		 
     			
     content += "</tr>";
