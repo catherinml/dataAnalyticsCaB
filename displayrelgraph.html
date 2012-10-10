@@ -46,9 +46,12 @@
 
 		</tr>
 		<tr>
-			<td width="828" colspan="4">
+			<td width="414" colspan="2">
 			<p align="center">
 			<input type="button" value="Display Graph" name="displaygraph" id="displaygraph" style="font:bold 13px serif;"></td>
+			<td width="414" colspan="2">
+			<p align="center">
+			<input type="button" value="Get Data" name="getdata" id="getdata" style="font:bold 13px serif;"></td>
 
 		</tr>
 		</table>
@@ -56,6 +59,31 @@
 		<br>
 		<br>
 		<div id="chart"></div>
+		<div id="graphdata" style="display:none">
+			
+			<table border="1" width="37%">
+			<tr>
+				<td width="214"><a href="" name="fromnode">Select Users</a></td>
+				<td width="183">
+				<p align="right"><a href="" name="tonode">Select Users</a></td>
+			</tr>
+			<tr>
+				<td width="214">
+					  <table border="1">
+    						<tbody id="user-from-content">
+    						</tbody>
+					  </table>
+
+				</td>
+				<td width="183">
+					  <table border="1">
+    						<tbody id="user-to-content">
+    						</tbody>
+					  </table>
+				</td>
+			</tr>
+			</table>
+		</div>
 <script type="text/javascript" >
 	gadgets.window.adjustHeight();
 	
