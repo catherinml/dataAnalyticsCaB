@@ -4609,7 +4609,8 @@ gadgets.window.adjustHeight();
       renderUserTable(users);
     }
     osapi.jive.core.users.requestPicker({success: callback, 	multiple: false,
-
+	
+});
   });
 
 });
