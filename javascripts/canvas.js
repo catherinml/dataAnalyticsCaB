@@ -4395,27 +4395,30 @@ var json = {"graphNodeDetails":
 
 
 
-alert("hello");
 	
 	$("#chart").html("");
-	var w = 400,
-    	h = 500,
-    	r = 5,
+
+	var margin = {top: 100, right: 300, bottom: 300, left: 100},
+	    w = 450 - margin.left - margin.right,
+	    h = 500 - margin.top - margin.bottom,
+	    r = 5,
     	fill = d3.scale.category20();
 
 
 		var force = d3.layout.force().charge(-120).size([w, h]);
 
-		var svg = d3.select("#chart").append("svg:svg").attr("width", w).attr("height", h)
+		var svg = d3.select("#chart").append("svg:svg.attr("width", w + margin.left + margin.right).attr("height", h + margin.top + margin.bottom)
 		    .attr("pointer-events", "all")
 		  	.append('svg:g')
 		   	.call(d3.behavior.zoom().on("zoom", redraw))
+		  	.append('svg:g')
+			.attr("transform", "translate(" + margin.left + "," + margin.top +")")
 		  	.append('svg:g');
 
 		svg.append('svg:rect')
-    		.attr('width', w )
-		    .attr('height', h )
-		    .attr('fill', 'white');
+    		.attr('width', w + margin.left + margin.right )
+		.attr('height',  h + margin.top + margin.bottom )
+		.attr('fill', 'white');
 
 		function redraw() {
 			  console.log("here", d3.event.translate, d3.event.scale);
