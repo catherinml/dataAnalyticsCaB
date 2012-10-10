@@ -4407,7 +4407,7 @@ var json = {"graphNodeDetails":
 
 		var force = d3.layout.force().charge(-120).size([w, h]);
 
-		var svg = d3.select("#chart").append("svg:svg.attr("width", w + margin.left + margin.right).attr("height", h + margin.top + margin.bottom)
+		var svg = d3.select("#chart").append("svg:svg").attr("width", w + margin.left + margin.right).attr("height", h + margin.top + margin.bottom)
 		    .attr("pointer-events", "all")
 		  	.append('svg:g')
 		   	.call(d3.behavior.zoom().on("zoom", redraw))
