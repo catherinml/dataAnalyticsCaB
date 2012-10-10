@@ -4608,6 +4608,7 @@ gadgets.window.adjustHeight();
 	 		var users = getUsersFromResponse(response);
       		var content = renderUserTable(users);
 			$("#user-from-content").html(content);
+			gadgets.window.adjustHeight();
     		}
      		osapi.jive.core.users.requestPicker({success: 			callback, 	multiple: false,
 		});
@@ -4619,8 +4620,9 @@ gadgets.window.adjustHeight();
 	 		var users = getUsersFromResponse(response);
       		var content = renderUserTable(users);
 			$("#user-to-content").html(content);
+			gadgets.window.adjustHeight();
     		}
-     		osapi.jive.core.users.requestPicker({success: 			callback, 	multiple: false,
+     		osapi.jive.core.users.requestPicker({success: 			callback, 	multiple: true,
 		});
 
 	});
