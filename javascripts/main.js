@@ -4606,9 +4606,19 @@ gadgets.window.adjustHeight();
   	$("#fromnode").click(function() {
     		var callback = function(response) {
 	 		var users = getUsersFromResponse(response);
-      		renderUserTable(users);
+      		var content = renderUserTable(users);
+			$("#user-from-content").html(content);
     		}
      		osapi.jive.core.users.requestPicker({success: 			callback, 	multiple: false,
+	});
+
+  	$("#tonode").click(function() {
+    		var callback = function(response) {
+	 		var users = getUsersFromResponse(response);
+      		var content = renderUserTable(users);
+			$("#user-to-content").html(content);
+    		}
+     		osapi.jive.core.users.requestPicker({success: 			callback, 	multiple: true,
 	});
   
 });
@@ -4635,9 +4645,7 @@ function renderUserTable(users) {
   content += "<th>ID</th>";
   content += "<th>Name</th>";
   content += "<th>Username</th>";
-  // include email in canvas view
-  if (currentView == 'canvas' || currentView == 'default') // Jive 5 currently returns 'default' for the canvas view
-    content += "<th>Email</th>";
+
   content += "</tr>";
 
   // render user rows
@@ -4647,12 +4655,11 @@ function renderUserTable(users) {
     content += "<td>" + user.id + "</td>";
     content += "<td>" + user.name + "</td>";
     content += "<td>" + user.username + "</td>";
-    // include email in canvas view
-    if (currentView == 'canvas' || currentView == 'default') // Jive 5 currently returns 'default' for the canvas view
-      content += "<td>" + user.email + "</td>";
+
     content += "</tr>";
   }
 
-  $("#user-from-content").html(content);
-   gadgets.window.adjustHeight();
+	return content;
+  
+   //gadgets.window.adjustHeight();
 }
