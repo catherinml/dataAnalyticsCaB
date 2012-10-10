@@ -4660,7 +4660,7 @@ function renderUserTable(users) {
     content += "<tr>"
     content += "<td>" + user.id + "</td>";
     content += "<td>" + user.name + "</td>";
-    content += "<td>" + user.username + "</td>";
+    content += "<td> " +  '<img src="' + user.avatarURL + '"/>' + "</td>";
 
     content += "</tr>";
   }
