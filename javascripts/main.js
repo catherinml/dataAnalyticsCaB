@@ -4608,11 +4608,11 @@ gadgets.window.adjustHeight();
 	 		var users = getUsersFromResponse(response);
       		var content = renderUserTable(users);
 			$("#user-from-content").html(content);
-			gadgets.window.adjustHeight();
+			
     		}
      		osapi.jive.core.users.requestPicker({success: 			callback, 	multiple: false,
 		});
-
+		gadgets.window.adjustHeight();
 	});
 
   	$("#tonode").click(function() {
@@ -4620,11 +4620,11 @@ gadgets.window.adjustHeight();
 	 		var users = getUsersFromResponse(response);
       		var content = renderUserTable(users);
 			$("#user-to-content").html(content);
-			gadgets.window.adjustHeight();
+			
     		}
      		osapi.jive.core.users.requestPicker({success: 			callback, 	multiple: true,
 		});
-
+		gadgets.window.adjustHeight();
 	});
 
 	
@@ -4660,7 +4660,7 @@ function renderUserTable(users) {
     content += "<tr>"
     content += "<td>" + user.id + "</td>";
     content += "<td>" + user.name + "</td>";
-    content += "<td> " +  '<img src="' + user.avatarURL + '"/>' + "</td>";
+    content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' + "</td>";
 
     content += "</tr>";
   }
