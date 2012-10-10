@@ -4610,10 +4610,22 @@ gadgets.window.adjustHeight();
 			$("#user-from-content").html(content);
     		}
      		osapi.jive.core.users.requestPicker({success: 			callback, 	multiple: false,
+		});
+
 	});
 
+  	$("#tonode").click(function() {
+    		var callback = function(response) {
+	 		var users = getUsersFromResponse(response);
+      		var content = renderUserTable(users);
+			$("#user-to-content").html(content);
+    		}
+     		osapi.jive.core.users.requestPicker({success: 			callback, 	multiple: false,
+		});
 
-});
+	});
+
+	
 
 });
 
