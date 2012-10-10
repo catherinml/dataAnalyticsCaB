@@ -4461,6 +4461,7 @@ var json = {"graphNodeDetails":
 
 // Button click
 $("#displaygraph").click(function() {
+	$("#graphdata").css("display","none");
 	gadgets.window.adjustHeight();
 	$("#chart").html("");
 		var w = 1360,
