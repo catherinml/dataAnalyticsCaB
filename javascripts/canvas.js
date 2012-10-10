@@ -4399,7 +4399,7 @@ alert("hello");
 	
 	$("#chart").html("");
 	var w = 400,
-    	h = 700,
+    	h = 500,
     	r = 5,
     	fill = d3.scale.category20();
 
