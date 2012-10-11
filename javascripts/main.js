@@ -4624,14 +4624,7 @@ gadgets.window.adjustHeight();
 			{
 			 	alert(i);
 				
-				/*json.graphNodeDetails.links.forEach(function(d) {
-				alert(d.source);
-				if(d.source == $("#jiveuserfrom_0").val &&
-				d.target == $("#jiveuserto_"+i).val ) {
-
-					alert(d.value);
-				}
-});*/
+				
 			}
 		
 
