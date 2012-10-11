@@ -4636,23 +4636,11 @@ gadgets.window.adjustHeight();
 			{
 			usertoid = document.getElementById("jiveuserto_"+i).value;
 			alert(usertoid );
-			json.graphNodeDetails.nodes.forEach(function(d) 			{	
+			/*json.graphNodeDetails.nodes.forEach(function(d) 			{	
 				alert(d.name);
-			/*	alert(usertoid);
-				if(d.name == usertoid) {
-					
-				json.graphNodeDetails.links.forEach(function(d) {
-				
-					if(d.source == fromindex &&
-					d.target == indexposto ) {
 
-						alert(d.value);
-					}
-				});
-				
-				}*/
 				indexposto = indexposto  + 1;
-			)}; 
+			)}; */
 						 						
 		}
 		
