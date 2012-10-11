@@ -4617,19 +4617,38 @@ gadgets.window.adjustHeight();
 		
 		var tototal = document.getElementById("jiveusertototal").value;
 		var fromtotal = document.getElementById("jiveusertototal").value;
+		var indexposfrom = 0;
+		var fromindex ;
+		json.graphNodeDetails.nodes.forEach(function(d) 			{
+			if(d.name == $("#jiveuserfrom_0").val ){
+				fromindex =  indexposfrom ;
+				break;
+			}
+			indexposfrom = indexposfrom +1;
+		});
 		
+		alert("fromindex"+fromindex)
 
-			
+		var indexposto = 0;
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
-			 						json.graphNodeDetails.links.forEach(function(d) {
-				alert(d.source);
-				if(d.source == $("#jiveuserfrom_0").val &&
-				d.target == $("#jiveuserto_"+i).val ) {
+			
+			json.graphNodeDetails.nodes.forEach(function(d) 			{
+				if(d.name == $("#jiveuserto_"+i).val ) {
+					
+				json.graphNodeDetails.links.forEach(function(d) {
+				
+					if(d.source == fromindex &&
+					d.target == indexposto ) {
 
-					alert(d.value);
+						alert(d.value);
+						break;
+					}
+				});
 				}
-});
+				indexposto = indexposto  + 1;
+			)};
+			 						
 			}
 		
 
