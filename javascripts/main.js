@@ -4621,28 +4621,25 @@ gadgets.window.adjustHeight();
 
 		var indexposfrom = 0;
 		var fromindex ;
-		for (var d in json.graphNodeDetails.nodes) {
-		//json.graphNodeDetails.nodes.forEach(function(d) 			//{
+		json.graphNodeDetails.nodes.forEach(function(d) 			{
 			alert(d.name +" : " + fromuserid1);
 			
 			if(d.name == fromuserid1){
 				fromindex =  indexposfrom ;
-				alert(fromindex);
-				alert(indexposfrom);
+				
 				break;
 			}
 			indexposfrom = indexposfrom +1;
-		//});
-		}
-		alert("Hi" + fromindex + "::"+ indexposfrom );
-		/*alert("fromindex"+fromindex)
+		});
+		
+		
 
 		var indexposto = 0;
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
 			
 			json.graphNodeDetails.nodes.forEach(function(d) 			{
-				if(d.name == $("#jiveuserto_"+i).val ) {
+				if(d.name == document.getElementById("jiveuserto_"+i).value) {
 					
 				json.graphNodeDetails.links.forEach(function(d) {
 				
@@ -4650,8 +4647,7 @@ gadgets.window.adjustHeight();
 					d.target == indexposto ) {
 
 						alert(d.value);
-						break;
-					}
+											}
 				});
 				}
 				indexposto = indexposto  + 1;
