@@ -4655,7 +4655,7 @@ gadgets.window.adjustHeight();
 			 						
 			}
 		
-*/
+
 
 
 		$("#graphdata").css("display","block");
