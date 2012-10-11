@@ -4639,13 +4639,13 @@ gadgets.window.adjustHeight();
 			json.graphNodeDetails.nodes.forEach(function(d) 			{	
 
 				if(d.name == usertoid) {
-					alert("inside");
+					
 					json.graphNodeDetails.links.forEach(function(d1) {
-				
+						
 						if(d1.source == fromindex &&
 							d1.target == indexposto ) 							{
 
-							alert(d.value);
+							alert(d1.value);
 						}
 					});
 				
