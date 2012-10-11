@@ -4650,10 +4650,11 @@ gadgets.window.adjustHeight();
 						alert(d.value);
 					}
 				});
-				//}*/
+				
 				}
 				indexposto = indexposto  + 1;
-			)}; 
+			//)}; 
+			}
 			 						
 			}
 		
