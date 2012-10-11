@@ -4455,7 +4455,7 @@ var json = {"graphNodeDetails":
 	
 
 $("#loadgrpah").click(function() {
-	$("#divjivegraph").css("display","none");
+	$("#divjivegraph").css("display","block");
 
 });
 
