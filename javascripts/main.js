@@ -4622,7 +4622,7 @@ gadgets.window.adjustHeight();
   	$("#fromnode").click(function() {
     		var callback = function(response) {
 	 		var users = getUsersFromResponse(response);
-      		var content = renderUserTable(users);
+      		var content = renderUserFromTable(users);
 			$("#user-from-content").html(content);
 			gadgets.window.adjustHeight();
     		}
@@ -4635,7 +4635,7 @@ gadgets.window.adjustHeight();
   	$("#tonode").click(function() {
     		var callback = function(response) {
 	 		var users = getUsersFromResponse(response);
-      		var content = renderUserTable(users);
+      		var content = renderUserToTable(users);
 			$("#user-to-content").html(content);
 			gadgets.window.adjustHeight();
     		}
@@ -4659,8 +4659,30 @@ function getUsersFromResponse(response) {
   return users;
 }
 
+function renderUserToTable(users) {
+  var currentView = gadgets.views.getCurrentView().getName();
 
-function renderUserTable(users) {
+  // render header row
+  var content = ""
+
+ content += "<tr>"
+  // render user rows
+
+  for(var i = 0; i < users.length; i++) {
+    var user = users[i];
+   
+    content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' + "</td>";				    		  		   
+   
+  }
+ content += "</tr>";
+	return content;
+  
+   //gadgets.window.adjustHeight();
+}
+
+
+
+function renderUserFromTable(users) {
   var currentView = gadgets.views.getCurrentView().getName();
 
   // render header row
