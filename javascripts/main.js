@@ -4624,11 +4624,11 @@ gadgets.window.adjustHeight();
 		json.graphNodeDetails.nodes.forEach(function(d) 			{
 			if(d.name == fromuserid1){
 				fromindex =  indexposfrom ;
-				break;
+				return false;
 			}
 			indexposfrom = indexposfrom +1;
 		});
-		
+		alert("Hi" + fromindex + "::"+ indexposfrom );
 		/*alert("fromindex"+fromindex)
 
 		var indexposto = 0;
