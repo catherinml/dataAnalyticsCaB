@@ -4636,7 +4636,9 @@ gadgets.window.adjustHeight();
 			{
 			usertoid = document.getElementById("jiveuserto_"+i).value;
 			alert(usertoid );
-			json.graphNodeDetails.nodes.forEach(function(d) 			{	alert(d.name);
+			for ( d in json.graphNodeDetails.nodes) {
+		//json.graphNodeDetails.nodes.forEach(function(d) 			//{	
+				alert(d.name);
 			/*	alert(usertoid);
 				if(d.name == usertoid) {
 					
@@ -4648,7 +4650,8 @@ gadgets.window.adjustHeight();
 						alert(d.value);
 					}
 				});
-				}*/
+				//}*/
+				}
 				indexposto = indexposto  + 1;
 			)}; 
 			 						
