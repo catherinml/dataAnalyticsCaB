@@ -4608,6 +4608,14 @@ gadgets.window.adjustHeight();
 		$("#divjivedata").css("display","block");
 		gadgets.window.adjustHeight();
 	});
+
+	$("#loaddata").click(function() {
+		
+		$("#chart").html("");
+		$("#graphdata").css("display","block");
+		gadgets.window.adjustHeight();
+	});
+
 	
 	
   	$("#fromnode").click(function() {
