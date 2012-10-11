@@ -4615,7 +4615,7 @@ gadgets.window.adjustHeight();
 		$("#chart").html("");
 		//get user contribution
 		json.graphNodeDetails.links.forEach(function(d) {
-			$("#txtEmail").val()
+			alert(d.value);
 		});
 
 
@@ -4685,7 +4685,7 @@ function renderUserToTable(users) {
 content += '<td width="5%">&nbsp;</td>';	   
    
   }
-content+='<input type="hidden" 	name="jiveusertototal_'+users.length + '" id = 	"jiveusertototal_'+users.length+'" 	value="'+users.length+'" />';
+content+='<input type="hidden" 	name="jiveusertototal" id = 	"jiveusertototal" value="'+users.length+'" />';
 
  content += "</tr>";
 	return content;
@@ -4711,7 +4711,7 @@ function renderUserFromTable(users) {
 + "</td>";				    		  		   
     content += "</tr>";
   }
-  content+='<input type="hidden" 	name="jiveuserfromtotal_'+users.length + '" id = 	"jiveuserfromtotal_'+users.length+'" value="'+users.length+'" />';
+  content+='<input type="hidden" name="jiveuserfromtotal" id = 	"jiveuserfromtotal" value="'+users.length+'" />';
 
 	return content;
   
