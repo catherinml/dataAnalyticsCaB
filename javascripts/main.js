@@ -4622,12 +4622,11 @@ gadgets.window.adjustHeight();
 		var indexposfrom = 0;
 		var fromindex ;
 		json.graphNodeDetails.nodes.forEach(function(d) 			{
-			alert(d.name);
-			/*if(d.name == fromuserid1){
+			if(d.name == fromuserid1){
 				fromindex =  indexposfrom ;
-				break;
+				//break;
 			}
-			indexposfrom = indexposfrom +1;*/
+			indexposfrom = indexposfrom +1;
 		});
 		
 		/*alert("fromindex"+fromindex)
