@@ -4622,8 +4622,7 @@ gadgets.window.adjustHeight();
 		var indexposfrom = 0;
 		var fromindex ;
 		json.graphNodeDetails.nodes.forEach(function(d) 			{
-			alert(d.name +" : " + fromuserid1);
-			
+						
 			if(d.name == fromuserid1){
 				fromindex =  indexposfrom ;
 				
@@ -4632,9 +4631,9 @@ gadgets.window.adjustHeight();
 			indexposfrom = indexposfrom +1;
 		});
 		
-		
+		alert(fromindex);
 
-		var indexposto = 0;
+		/*var indexposto = 0;
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
 			
@@ -4653,7 +4652,7 @@ gadgets.window.adjustHeight();
 				indexposto = indexposto  + 1;
 			)};
 			 						
-			}
+			}*/
 		
 
 
