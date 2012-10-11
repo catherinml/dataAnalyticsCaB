@@ -4671,7 +4671,10 @@ function renderUserToTable(users) {
   for(var i = 0; i < users.length; i++) {
     var user = users[i];
    
-    content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' + "</td>";				    		  	content += '<td width="5%">&nbsp;</td>';	   
+    content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' 
++'<input type="hidden"  name="jiveuser_'+user.name + '" id = "jiveuser_'+user.id +'"/>'
++ "</td>";				    		  	
+content += '<td width="5%">&nbsp;</td>';	   
    
   }
  content += "</tr>";
@@ -4693,7 +4696,9 @@ function renderUserFromTable(users) {
   for(var i = 0; i < users.length; i++) {
     var user = users[i];
     content += "<tr>"
-    content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' + "</td>";				    		  		   
+    content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' 
++'<input type="hidden"  name="jiveuser_'+user.name + '" id = "jiveuser_'+user.id +'"/>'
++ "</td>";				    		  		   
     content += "</tr>";
   }
 
