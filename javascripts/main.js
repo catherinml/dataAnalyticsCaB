@@ -4623,14 +4623,15 @@ gadgets.window.adjustHeight();
 		for(int i = 0 ; i < parseInt(tototal);i++)
 			{
 			 	alert(i);
-				json.graphNodeDetails.links.forEach(function(d) {
+				alert(json.graphNodeDetails.links);
+				/*json.graphNodeDetails.links.forEach(function(d) {
 				alert(d.source);
 				if(d.source == $("#jiveuserfrom_0").val &&
 				d.target == $("#jiveuserto_"+i).val ) {
 
 					alert(d.value);
 				}
-});
+});*/
 			}
 		
 
