@@ -4624,6 +4624,8 @@ gadgets.window.adjustHeight();
 		json.graphNodeDetails.nodes.forEach(function(d) 			{
 			if(d.name == fromuserid1){
 				fromindex =  indexposfrom ;
+				alert(fromindex);
+				alert(indexposfrom);
 				return false;
 			}
 			indexposfrom = indexposfrom +1;
