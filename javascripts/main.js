@@ -4671,7 +4671,7 @@ function renderUserToTable(users) {
   for(var i = 0; i < users.length; i++) {
     var user = users[i];
    
-    content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' + "</td>";				    		  		   
+    content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' + "</td>";				    		  	content += '<td width="5%">&nbsp;</td>';	   
    
   }
  content += "</tr>";
