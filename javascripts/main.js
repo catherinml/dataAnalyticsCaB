@@ -4456,6 +4456,7 @@ var json = {"graphNodeDetails":
 
 $("#displaygraph").click(function() {
 	$("#divjivegraph").css("display","block");
+	gadgets.window.adjustHeight();
 
 });
 
@@ -4602,6 +4603,7 @@ gadgets.window.adjustHeight();
 	$("#getdata").click(function() {
 		
 		$("#chart").html("");
+		$("#divjivegraph").css("display","none");
 		$("#graphdata").css("display","block");
 		gadgets.window.adjustHeight();
 	});
