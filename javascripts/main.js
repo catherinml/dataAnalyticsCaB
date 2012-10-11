@@ -4625,8 +4625,6 @@ gadgets.window.adjustHeight();
 						
 			if(d.name == fromuserid1){
 				fromindex =  indexposfrom ;
-				
-				break;
 			}
 			indexposfrom = indexposfrom +1;
 		});
