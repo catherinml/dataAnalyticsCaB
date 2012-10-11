@@ -4620,7 +4620,9 @@ gadgets.window.adjustHeight();
 		var indexposfrom = 0;
 		var fromindex ;
 		json.graphNodeDetails.nodes.forEach(function(d) 			{
-			if(d.name == $("#jiveuserfrom_0").val ){
+			alert(d.name);
+			alert(document.getElementById("jiveuserfrom_0").value);
+			if(d.name ==document.getElementById("jiveuserfrom_0").value){
 				fromindex =  indexposfrom ;
 				break;
 			}
