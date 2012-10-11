@@ -4454,7 +4454,7 @@ var json = {"graphNodeDetails":
 
 	
 
-$("#loadgrpah").click(function() {
+$("#displaygraph").click(function() {
 	$("#divjivegraph").css("display","block");
 
 });
@@ -4463,7 +4463,7 @@ $("#loadgrpah").click(function() {
 
 
 // Button click
-$("#loadgrpah").click(function() {
+$("#loadgraph").click(function() {
 	$("#graphdata").css("display","none");
 	gadgets.window.adjustHeight();
 	$("#chart").html("");
