@@ -4620,7 +4620,7 @@ gadgets.window.adjustHeight();
 		
 
 			
-		for(int i = 0 ; i < parseInt(tototal);i++)
+		for(int i = 0 ; i < tototal; i++)
 			{
 			 	alert(i);
 				
