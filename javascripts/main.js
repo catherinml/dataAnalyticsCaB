@@ -4617,7 +4617,9 @@ gadgets.window.adjustHeight();
 		
 		var tototal = document.getElementById("jiveusertototal").value;
 		var fromtotal = document.getElementById("jiveusertototal").value;
-		var indexposfrom = 0;
+alert(document.getElementById("jiveuserfrom_0").value);
+
+		/*var indexposfrom = 0;
 		var fromindex ;
 		json.graphNodeDetails.nodes.forEach(function(d) 			{
 			alert(d.name);
@@ -4631,7 +4633,7 @@ gadgets.window.adjustHeight();
 		
 		alert("fromindex"+fromindex)
 
-		/*var indexposto = 0;
+		var indexposto = 0;
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
 			
