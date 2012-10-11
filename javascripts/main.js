@@ -4641,8 +4641,8 @@ gadgets.window.adjustHeight();
 				if(d.name == usertoid) {
 					
 					json.graphNodeDetails.links.forEach(function(d1) {
-						alert(fromindex + " :" + d1.source);
-				alert(indexposto + " :" + d1.target);
+					//	alert(fromindex + " :" + d1.source);
+				//alert(indexposto + " :" + d1.target);
 
 						if(d1.source == fromindex &&
 							d1.target == indexposto ) 							{
