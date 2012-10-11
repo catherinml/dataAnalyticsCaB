@@ -4455,6 +4455,7 @@ var json = {"graphNodeDetails":
 	
 
 $("#displaygraph").click(function() {
+	$("#graphdata").css("display","none");
 	$("#divjivedata").css("display","none");
 	$("#divjivegraph").css("display","block");
 	gadgets.window.adjustHeight();
