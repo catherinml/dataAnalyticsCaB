@@ -4629,16 +4629,15 @@ gadgets.window.adjustHeight();
 			indexposfrom = indexposfrom +1;
 		});
 		
-		alert(fromindex);
-
+		
 		var indexposto = 0;
 		var usertoid;
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
 			usertoid = document.getElementById("jiveuserto_"+i).value;
 			alert(usertoid );
-			/*json.graphNodeDetails.nodes.forEach(function(d) 			{	alert(d.name);
-				alert(usertoid);
+			json.graphNodeDetails.nodes.forEach(function(d) 			{	alert(d.name);
+			/*	alert(usertoid);
 				if(d.name == usertoid) {
 					
 				json.graphNodeDetails.links.forEach(function(d) {
@@ -4649,9 +4648,9 @@ gadgets.window.adjustHeight();
 						alert(d.value);
 					}
 				});
-				}
+				}*/
 				indexposto = indexposto  + 1;
-			)}; */
+			)}; 
 			 						
 			}
 		
