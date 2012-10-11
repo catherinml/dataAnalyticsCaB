@@ -4617,21 +4617,20 @@ gadgets.window.adjustHeight();
 		
 		var tototal = document.getElementById("jiveusertototal").value;
 		var fromtotal = document.getElementById("jiveusertototal").value;
-alert(document.getElementById("jiveuserfrom_0").value);
+		var fromuserid1 = document.getElementById("jiveuserfrom_0").value;
 
-		/*var indexposfrom = 0;
+		var indexposfrom = 0;
 		var fromindex ;
 		json.graphNodeDetails.nodes.forEach(function(d) 			{
 			alert(d.name);
-			alert(document.getElementById("jiveuserfrom_0").value);
-			if(d.name ==document.getElementById("jiveuserfrom_0").value){
+			/*if(d.name == fromuserid1){
 				fromindex =  indexposfrom ;
 				break;
 			}
-			indexposfrom = indexposfrom +1;
+			indexposfrom = indexposfrom +1;*/
 		});
 		
-		alert("fromindex"+fromindex)
+		/*alert("fromindex"+fromindex)
 
 		var indexposto = 0;
 		for(var i = 0 ; i < parseInt(tototal); i++)
