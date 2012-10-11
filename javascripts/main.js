@@ -4454,13 +4454,16 @@ var json = {"graphNodeDetails":
 
 	
 
+$("#loadgrpah").click(function() {
+	$("#divjivegraph").css("display","none");
 
+});
 
 
 
 
 // Button click
-$("#displaygraph").click(function() {
+$("#loadgrpah").click(function() {
 	$("#graphdata").css("display","none");
 	gadgets.window.adjustHeight();
 	$("#chart").html("");
