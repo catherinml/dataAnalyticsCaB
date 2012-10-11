@@ -4614,9 +4614,21 @@ gadgets.window.adjustHeight();
 		
 		$("#chart").html("");
 		//get user contribution
-		json.graphNodeDetails.links.forEach(function(d) {
-			alert(d.value);
-		});
+		
+			var tototal = $("#jiveusertototal").val;
+			var fromtotal = $("#jiveuserfromtotal").val;
+
+			for(int i = 0 ; i < parseInt(tototal);i++)
+			{
+				json.graphNodeDetails.links.forEach(function(d) {
+				if(d.source == $("#jiveuserfrom_0").val &&
+				d.target == $("#jiveuserto_"+i).val ) {
+
+					alert(d.value);
+				}
+});
+			}
+		
 
 
 
@@ -4680,7 +4692,7 @@ function renderUserToTable(users) {
     var user = users[i];
    
     content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' 
-+'<input type="hidden"  name="jiveuserto_'+user.id + '" id = "jiveuserto_'+user.id +'" value="'+user.id +'" />'
++'<input type="hidden"  name="jiveuserto_'+i + '" id = "jiveuserto_'+i +'" value="'+user.id +'" />'
 + "</td>";				    		  	
 content += '<td width="5%">&nbsp;</td>';	   
    
@@ -4707,7 +4719,7 @@ function renderUserFromTable(users) {
     var user = users[i];
     content += "<tr>"
     content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' 
-+'<input type="hidden"  name="jiveuserfrom_'+user.id + '" id = "jiveuserfrom_'+user.id +'" value="'+user.id +'" />'
++'<input type="hidden"  name="jiveuserfrom_'+i + '" id = "jiveuserfrom_'+i +'" value="'+user.id +'" />'
 + "</td>";				    		  		   
     content += "</tr>";
   }
