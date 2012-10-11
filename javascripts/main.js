@@ -4631,7 +4631,7 @@ gadgets.window.adjustHeight();
 		
 		alert(fromindex);
 
-		/*var indexposto = 0;
+		var indexposto = 0;
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
 			
@@ -4650,7 +4650,7 @@ gadgets.window.adjustHeight();
 				indexposto = indexposto  + 1;
 			)};
 			 						
-			}*/
+			}
 		
 
 
