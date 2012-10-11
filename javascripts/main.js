@@ -4615,10 +4615,13 @@ gadgets.window.adjustHeight();
 		$("#chart").html("");
 		//get user contribution
 		
-			var tototal = $("#jiveusertototal").val;
-			var fromtotal = $("#jiveuserfromtotal").val;
-
-			for(int i = 0 ; i < parseInt(tototal);i++)
+		var tototal = $("#jiveusertototal").val;
+		var fromtotal = $("#jiveuserfromtotal").val;
+		
+		alert(tototal);
+		alert(fromtotal);
+			
+		/*	for(int i = 0 ; i < parseInt(tototal);i++)
 			{
 				json.graphNodeDetails.links.forEach(function(d) {
 				if(d.source == $("#jiveuserfrom_0").val &&
@@ -4630,7 +4633,7 @@ gadgets.window.adjustHeight();
 			}
 		
 
-
+*/
 
 		$("#graphdata").css("display","block");
 		gadgets.window.adjustHeight();
