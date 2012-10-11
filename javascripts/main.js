@@ -4623,11 +4623,14 @@ gadgets.window.adjustHeight();
 		var fromindex ;
 		for (var d in json.graphNodeDetails.nodes) {
 		//json.graphNodeDetails.nodes.forEach(function(d) 			//{
+			alert(d.name +" : " + fromuserid1);
+			
 			if(d.name == fromuserid1){
 				fromindex =  indexposfrom ;
 				alert(fromindex);
 				alert(indexposfrom);
-				break;			}
+				break;
+			}
 			indexposfrom = indexposfrom +1;
 		//});
 		}
