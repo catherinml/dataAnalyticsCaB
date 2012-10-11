@@ -4636,9 +4636,9 @@ gadgets.window.adjustHeight();
 			{
 			usertoid = document.getElementById("jiveuserto_"+i).value;
 			alert(usertoid );
-			for (var d1 in json.graphNodeDetails.nodes){
+			json.graphNodeDetails.nodes.forEach(function(d1) 			{	
 				alert(d1.name);
-			}
+			)};
 			/*json.graphNodeDetails.nodes.forEach(function(d) 			{	
 				alert(d.name);
 
