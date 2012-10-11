@@ -4622,9 +4622,7 @@ gadgets.window.adjustHeight();
 			
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
-			 	alert(i);
-				
-				json.graphNodeDetails.links.forEach(function(d) {
+			 						json.graphNodeDetails.links.forEach(function(d) {
 				alert(d.source);
 				if(d.source == $("#jiveuserfrom_0").val &&
 				d.target == $("#jiveuserto_"+i).val ) {
