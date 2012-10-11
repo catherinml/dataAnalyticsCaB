@@ -4635,16 +4635,24 @@ gadgets.window.adjustHeight();
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
 			usertoid = document.getElementById("jiveuserto_"+i).value;
-			alert(usertoid );
-			json.graphNodeDetails.nodes.forEach(function(d1) 			{	
-				alert(d1.name);
-			});
-			/*json.graphNodeDetails.nodes.forEach(function(d) 			{	
-				alert(d.name);
+			
+			json.graphNodeDetails.nodes.forEach(function(d) 			{	
 
+				if(d.name == usertoid) {
+					
+					json.graphNodeDetails.links.forEach(function(d1) {
+				
+						if(d1.source == fromindex &&
+							d1.target == indexposto ) 							{
+
+							alert(d.value);
+						}
+					});
+				
+				}
 				indexposto = indexposto  + 1;
-			)}; */
-						 						
+			});
+				
 		}
 		
 
