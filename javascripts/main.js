@@ -4613,6 +4613,12 @@ gadgets.window.adjustHeight();
 	$("#loaddata").click(function() {
 		
 		$("#chart").html("");
+		//get user contribution
+		json.graphNodeDetails.links.forEach(function(d) {
+			$("#txtEmail").val()
+		});
+
+
 
 		$("#graphdata").css("display","block");
 		gadgets.window.adjustHeight();
@@ -4650,6 +4656,7 @@ gadgets.window.adjustHeight();
 
 });
 
+
 function getUsersFromResponse(response) {
   var users = [];
   if(response.data instanceof osapi.jive.core.User) {
@@ -4673,12 +4680,13 @@ function renderUserToTable(users) {
     var user = users[i];
    
     content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' 
-+'<input type="hidden"  name="jiveuserto_'+user.id + '" id = "jiveuserto_'+user.id +'"/>'
++'<input type="hidden"  name="jiveuserto_'+user.id + '" id = "jiveuserto_'+user.id +'" value="'+user.id +'" />'
 + "</td>";				    		  	
 content += '<td width="5%">&nbsp;</td>';	   
    
   }
-content+='<input type="hidden" 	name="jiveusertototal_'+users.length + '" id = 	"jiveusertototal_'+users.length+'"/>';
+content+='<input type="hidden" 	name="jiveusertototal_'+users.length + '" id = 	"jiveusertototal_'+users.length+'" 	value="'+users.length+'" />';
+
  content += "</tr>";
 	return content;
   
@@ -4699,11 +4707,11 @@ function renderUserFromTable(users) {
     var user = users[i];
     content += "<tr>"
     content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' 
-+'<input type="hidden"  name="jiveuserfrom_'+user.id + '" id = "jiveuserfrom_'+user.id +'"/>'
++'<input type="hidden"  name="jiveuserfrom_'+user.id + '" id = "jiveuserfrom_'+user.id +'" value="'+user.id +'" />'
 + "</td>";				    		  		   
     content += "</tr>";
   }
-  content+='<input type="hidden" 	name="jiveuserfromtotal_'+users.length + '" id = 	"jiveuserfromtotal_'+users.length+'"/>';
+  content+='<input type="hidden" 	name="jiveuserfromtotal_'+users.length + '" id = 	"jiveuserfromtotal_'+users.length+'" value="'+users.length+'" />';
 
 	return content;
   
