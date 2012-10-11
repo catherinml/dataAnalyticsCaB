@@ -4629,7 +4629,7 @@ gadgets.window.adjustHeight();
 		
 		alert("fromindex"+fromindex)
 
-		var indexposto = 0;
+		/*var indexposto = 0;
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
 			
@@ -4651,7 +4651,7 @@ gadgets.window.adjustHeight();
 			 						
 			}
 		
-
+*/
 
 
 		$("#graphdata").css("display","block");
