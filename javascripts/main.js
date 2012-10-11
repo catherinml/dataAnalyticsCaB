@@ -4455,7 +4455,7 @@ var json = {"graphNodeDetails":
 	
 
 $("#displaygraph").click(function() {
-	$("#graphdata").css("display","none");
+	$("#divjivedata").css("display","none");
 	$("#divjivegraph").css("display","block");
 	gadgets.window.adjustHeight();
 
@@ -4466,7 +4466,7 @@ $("#displaygraph").click(function() {
 
 // Button click
 $("#loadgraph").click(function() {
-	$("#graphdata").css("display","none");
+	$("#divjivedata").css("display","none");
 	gadgets.window.adjustHeight();
 	$("#chart").html("");
 		var w = 1360,
@@ -4605,7 +4605,7 @@ gadgets.window.adjustHeight();
 		
 		$("#chart").html("");
 		$("#divjivegraph").css("display","none");
-		$("#graphdata").css("display","block");
+		$("#divjivedata").css("display","block");
 		gadgets.window.adjustHeight();
 	});
 	

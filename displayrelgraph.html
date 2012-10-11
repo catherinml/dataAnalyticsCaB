@@ -84,7 +84,7 @@
 		</tr>
 		<tr>
 		<td colspan="4"> 
-			<p align="center"><input type="button" value="Load" name="loadgraph" id="loadgraph" style="font:bold 13px serif;">
+			<p align="center"><input type="button" value="Load Graph" name="loadgraph" id="loadgraph" style="font:bold 13px serif;">
 		<td>
 		</tr>
 
@@ -92,14 +92,41 @@
 		</div>
 
 		<div id="chart"></div>
+
+
+
+		<div id="divjivedata" style="display:none" >
+		<table border="0" width="80%">
+		<tr>
+			<td width="23%"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Relationship From:</span></td>
+			<td width="20%">
+				<input type="button" value="Select User" name="fromnode" id="fromnode" style="font:bold 13px serif;">
+			</td>
+			<td width="3%" rowspan="2">&nbsp;</td>
+
+			<td width="23%"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Relationship To:</span></td>
+			<td width="20%">
+				<input type="button" value="Select Users" name="tonode" id="tonode" style="font:bold 13px serif;">
+			</td>
+			
+			</td>
+
+
+		</tr>
+		<tr>
+		<td colspan="4"> 
+			<p align="center"><input type="button" value="Load Data" name="loaddata" id="loaddata" style="font:bold 13px serif;">
+		<td>
+		</tr>
+
+		</table>
+		</div>
+
+
+
 		<div id="graphdata"  style="display:none">
 			
 			<table border="0" width="37%">
-			<tr>
-				<td width="214"><input type="button" value="Relationship From" name="fromnode" id="fromnode" style="font:bold 13px serif;"></td>
-				<td width="183">
-				<p align="left"><input type="button" value="Relationship To" name="tonode" id="tonode" style="font:bold 13px serif;"></td>
-			</tr>
 			<tr>
 				<td width="214">
 					  <table border="1">
