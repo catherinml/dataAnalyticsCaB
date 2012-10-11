@@ -4618,7 +4618,7 @@ gadgets.window.adjustHeight();
 		var tototal = $("#jiveusertototal").val;
 		var fromtotal = $("#jiveuserfromtotal").val;
 		
-		alert(tototal);
+		alert(document.getElementById("jiveusertototal").value);
 		alert(fromtotal);
 			
 		/*	for(int i = 0 ; i < parseInt(tototal);i++)
