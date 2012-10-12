@@ -4632,6 +4632,8 @@ gadgets.window.adjustHeight();
 		
 		var indexposto = 0;
 		var usertoid;
+		var content = "";
+		content += "<tr>"
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
 			usertoid = document.getElementById("jiveuserto_"+i).value;
@@ -4641,14 +4643,13 @@ gadgets.window.adjustHeight();
 				if(d.name == usertoid) {
 					
 					json.graphNodeDetails.links.forEach(function(d1) {
-					//	alert(fromindex + " :" + d1.source);
-				//alert(indexposto + " :" + d1.target);
+					
 
 						if(d1.source == fromindex &&
 							d1.target == indexposto ) 							{
-
-							alert(d1.value);
-						}
+							content += '<td> <div width="35" height="35" id="div_'+d1.value + '">'+d1.value+'</div></td>';
+							content += '<td width="5%">&nbsp;</td>';
+													}
 					});
 				
 				}
@@ -4656,7 +4657,9 @@ gadgets.window.adjustHeight();
 			});
 				
 		}
-		
+		content += "<tr>"
+
+		$("#contributionData").html(content);
 
 
 
