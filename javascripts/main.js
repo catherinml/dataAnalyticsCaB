@@ -4649,7 +4649,7 @@ gadgets.window.adjustHeight();
 
 						if(d1.source == fromindex &&
 							d1.target == indexposto ) 							{
-							content += '<td> <div width="35" height="35" id="div_'+d1.value + '">'+d1.value+'</div></td>';
+							content += '<width="20%"> <div width="35" height="35" id="div_'+d1.value + '">'+d1.value+'</div></td>';
 							content += '<td width="5%">&nbsp;</td>';
 							flagcontribution = "true";							}
 					});
@@ -4658,7 +4658,7 @@ gadgets.window.adjustHeight();
 				indexposto = indexposto  + 1;
 			});
 			if(flagcontribution == "false"){
-				content += '<td width="10%"> <div width="35" height="35" id="div_'+i+ '">'+0+'</div></td>';
+				content += '<td width="20%"> <div width="35" height="35" id="div_'+i+ '">'+0+'</div></td>';
 							content += '<td width="5%">&nbsp;</td>';
 
 			}
