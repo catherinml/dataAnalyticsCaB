@@ -4637,7 +4637,7 @@ gadgets.window.adjustHeight();
 		var flagcontribution = "false";
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
-			content += '<tr height="20%">';
+			content += '<tr height="20%" style="height:40px">';
 			flagcontribution = "false";
 			usertoid = document.getElementById("jiveuserto_"+i).value;
 			indexposto = 0;
@@ -4651,8 +4651,7 @@ gadgets.window.adjustHeight();
 						if(d1.source == fromindex &&
 							d1.target == indexposto ) 							{
 							content += '<td width="20%">  <div width="35" height="35" id="div_'+d1.value + '">'+d1.value+'</div></td>';
-							content += '<td width="5%">&nbsp;</td>';
-
+							
 							flagcontribution = "true";							}
 					});
 				
@@ -4730,7 +4729,7 @@ function renderUserToTable(users) {
 
   for(var i = 0; i < users.length; i++) {
     var user = users[i];
-   content += '<tr height="20%">';
+   content += '<tr height="20%" style="height:40px">';
     content += '<td width="20%"> ' +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' 
 +'<input type="hidden"  name="jiveuserto_'+i + '" id = "jiveuserto_'+i +'" value="'+user.id +'" />'
 + "</td>";				    		  	
