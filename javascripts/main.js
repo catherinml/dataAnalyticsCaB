@@ -4651,7 +4651,7 @@ gadgets.window.adjustHeight();
 						if(d1.source == fromindex &&
 							d1.target == indexposto ) 							{
 							content += '<td width="20%">  <div width="35" height="35" id="div_'+d1.value + '">'+d1.value+'</div></td>';
-							alert(d1.value);
+
 							flagcontribution = "true";							}
 					});
 				
@@ -4757,7 +4757,7 @@ function renderUserFromTable(users) {
   for(var i = 0; i < users.length; i++) {
     var user = users[i];
     content += "<tr>"
-    content += "<td> " +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' 
+    content += "<td> " +  '<img height="45" width="45" src="' + user.avatarURL + '"/>' 
 +'<input type="hidden"  name="jiveuserfrom_'+i + '" id = "jiveuserfrom_'+i +'" value="'+user.id +'" />'
 + "</td>";				    		  		   
     content += "</tr>";
