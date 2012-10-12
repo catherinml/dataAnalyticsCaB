@@ -4649,7 +4649,7 @@ gadgets.window.adjustHeight();
 
 						if(d1.source == fromindex &&
 							d1.target == indexposto ) 							{
-							content += '<width="20%"> <div width="35" height="35" id="div_'+d1.value + '">'+d1.value+'</div></td>';
+							content += '<td width="20%">  <div width="35" height="35" id="div_'+d1.value + '">'+d1.value+'</div></td>';
 							content += '<td width="5%">&nbsp;</td>';
 							flagcontribution = "true";							}
 					});
