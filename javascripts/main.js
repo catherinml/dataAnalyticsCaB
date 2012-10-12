@@ -4633,10 +4633,11 @@ gadgets.window.adjustHeight();
 		var indexposto = 0;
 		var usertoid;
 		var content = "";
-		content += "<tr>"
+		
 		var flagcontribution = "false";
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
+			content += "<tr>"
 			flagcontribution = "false";
 			usertoid = document.getElementById("jiveuserto_"+i).value;
 			indexposto = 0;
@@ -4651,7 +4652,7 @@ gadgets.window.adjustHeight();
 							d1.target == indexposto ) 							{
 							content += '<td width="20%">  <div width="35" height="35" id="div_'+d1.value + '">'+d1.value+'</div></td>';
 							content += '<td width="5%">&nbsp;</td>';
-							alert(d1.value);
+
 							flagcontribution = "true";							}
 					});
 				
@@ -4663,9 +4664,9 @@ gadgets.window.adjustHeight();
 							content += '<td width="5%">&nbsp;</td>';
 
 			}
-				
+			content += "<tr>"
 		}
-		content += "<tr>"
+		
 
 		$("#contributionData").html(content);
 
@@ -4724,21 +4725,21 @@ function renderUserToTable(users) {
   // render header row
   var content = ""
 
- content += "<tr>"
+ 
   // render user rows
 
   for(var i = 0; i < users.length; i++) {
     var user = users[i];
-   
+   content += "<tr>"
     content += '<td width="20%"> ' +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' 
 +'<input type="hidden"  name="jiveuserto_'+i + '" id = "jiveuserto_'+i +'" value="'+user.id +'" />'
 + "</td>";				    		  	
 content += '<td width="5%">&nbsp;</td>';	   
-   
+    content += "</tr>";
   }
 content+='<input type="hidden" 	name="jiveusertototal" id = 	"jiveusertototal" value="'+users.length+'" />';
 
- content += "</tr>";
+
 	return content;
   
    //gadgets.window.adjustHeight();
