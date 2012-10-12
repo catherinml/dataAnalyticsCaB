@@ -4660,7 +4660,7 @@ gadgets.window.adjustHeight();
 			});
 			if(flagcontribution == "false"){
 				content += '<td width="20%"> <div width="35" height="35" id="div_'+i+ '">'+0+'</div></td>';
-							content += '<td width="5%">&nbsp;</td>';
+							
 
 			}
 			content += "<tr>"
