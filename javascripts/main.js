@@ -4639,7 +4639,7 @@ gadgets.window.adjustHeight();
 			{
 			flagcontribution = "false";
 			usertoid = document.getElementById("jiveuserto_"+i).value;
-			
+			indexposto = 0;
 			json.graphNodeDetails.nodes.forEach(function(d) 			{	
 
 				if(d.name == usertoid) {
