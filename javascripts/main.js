@@ -4637,7 +4637,7 @@ gadgets.window.adjustHeight();
 		var flagcontribution = "false";
 		for(var i = 0 ; i < parseInt(tototal); i++)
 			{
-			content += "<tr>"
+			content += '<tr height="20%">';
 			flagcontribution = "false";
 			usertoid = document.getElementById("jiveuserto_"+i).value;
 			indexposto = 0;
@@ -4730,11 +4730,11 @@ function renderUserToTable(users) {
 
   for(var i = 0; i < users.length; i++) {
     var user = users[i];
-   content += "<tr>"
+   content += '<tr height="20%">';
     content += '<td width="20%"> ' +  '<img height="35" width="35" src="' + user.avatarURL + '"/>' 
 +'<input type="hidden"  name="jiveuserto_'+i + '" id = "jiveuserto_'+i +'" value="'+user.id +'" />'
 + "</td>";				    		  	
-content += '<td width="5%">&nbsp;</td>';	   
+   
     content += "</tr>";
   }
 content+='<input type="hidden" 	name="jiveusertototal" id = 	"jiveusertototal" value="'+users.length+'" />';
