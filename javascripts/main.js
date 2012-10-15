@@ -4401,9 +4401,9 @@ $("input[type='radio']").change(function () {
 	
 	var typeID = $("#typeofrelationship").val();
 	var grouporspace = $(this).val();
-	alert($(this).val());
+	
 	$("#selectgroup").html("");
-	if (typeID == "@self" ) {
+	if (typeID == "@self" && grouporspace =="group" ) {
 	$("#grouptable").css("display","block");
 		osapi.groups.get({ 
 			userId : "@me", 
@@ -4429,7 +4429,7 @@ $("input[type='radio']").change(function () {
 				}
 			} 
 		});
-	} else if (typeID == "@selected" ) {
+	} else if (typeID == "@selected"  && grouporspace =="group") {
 		$('#selectgroup').attr('multiple',true);	
 		$("#grouptable").css("display","block");
 		osapi.groups.get({ 
@@ -4456,8 +4456,37 @@ $("input[type='radio']").change(function () {
 			} 
 		});
 	} // end else if
-	else {
+	else if (typeID == "@all"  && grouporspace =="group"){
 		$("#grouptable").css("display","none");
+	}
+	else (typeID == "@self" && grouporspace =="space" ) {
+	$("#grouptable").css("display","none");
+
+	$("#spacetable").css("display","none");
+		osapi.spaces.get({ 
+			userId : "@me", 
+			groupId : "@self", 
+			sortBy : "title", 
+			sortOrder : "ascending" 
+		}).execute(function (response) { 
+			if (response.error) { 
+				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
+			} 
+			else { 
+				if (response.list) {
+
+					var spaces = response.list; 
+					var html = "";
+										$(spaces).each(function(index, group) 					{
+												html += "<option value=" + group.id + ">" + group.name + "</option>";
+			         
+        				});
+	$('#selectspace').attr('multiple',false);	
+	$("#selectspace").html(html);
+  					  					gadgets.window.adjustHeight();
+				}
+			} 
+		});
 	}
     });
 
