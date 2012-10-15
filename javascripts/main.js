@@ -4464,9 +4464,9 @@ $("input[type='radio']").change(function () {
 	$("#grouptable").css("display","none");
 
 	$("#spacetable").css("display","block");
-	alert("hello");
+	
 		osapi.jive.core.spaces.get({limit :20}).execute(function (response) { 
-			alert(response);
+			alert(response.totalResults);
 			if (response.error) {
 				
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
