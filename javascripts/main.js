@@ -4466,17 +4466,19 @@ $("input[type='radio']").change(function () {
 	$("#spacetable").css("display","block");
 	alert("hello");
 		osapi.jive.core.spaces.get({contextId: "@viewer", contextType: "@person"}).execute(function (response) { 
-			alert(response);
-			if (response.error) { 
+			
+			if (response.error) {
+				alert(response[0] );
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
 			} 
 			else { 
 				if (response.list) {
+					alert("inside else if");
 					alert(response.list);
 					var spaces = response.list; 
 					var html = "";
-										$(spaces).each(function(index, group) 					{
-												html += "<option value=" + group.id + ">" + group.name + "</option>";
+										$(spaces).each(function(index, space) 					{
+												html += "<option value=" + space.id + ">" + space.name + "</option>";
 			         
         				});
 	$('#selectspace').attr('multiple',false);	
