@@ -4468,6 +4468,7 @@ $("input[type='radio']").change(function () {
 			limit :30 
 			
 		}).execute(function (response) { 
+			alert(response);
 			if (response.error) { 
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
 			} 
