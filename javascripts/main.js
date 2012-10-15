@@ -4467,6 +4467,7 @@ $("input[type='radio']").change(function () {
 	
 		osapi.jive.core.spaces.get({limit :20}).execute(function (response) { 
 			alert(response.data);
+			alert(response.list);
 			if (response.error) {
 				
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
