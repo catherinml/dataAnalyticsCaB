@@ -4465,10 +4465,7 @@ $("input[type='radio']").change(function () {
 
 	$("#spacetable").css("display","block");
 	alert("hello");
-	/*	osapi.spaces.get({ 
-			limit :30 
-			
-		}).execute(function (response) { 
+		osapi.spaces.get({contextId: "@viewer", contextType: "@person"}).execute(function (response) { 
 			alert(response);
 			if (response.error) { 
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
@@ -4487,7 +4484,7 @@ $("input[type='radio']").change(function () {
   					  					gadgets.window.adjustHeight();
 				}
 			} 
-		});*/
+		});
 	}
     });
 
