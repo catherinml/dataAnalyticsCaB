@@ -4465,7 +4465,13 @@ $("input[type='radio']").change(function () {
 
 	$("#spacetable").css("display","block");
 	alert("hello");
-		osapi.spaces.get({contextId: "@viewer", contextType: "@person"}).execute(function (response) { 
+		osapi.groups.get({ 
+			userId : "@me", 
+			groupId : "@all", 
+			sortBy : "title", 
+			sortOrder : "ascending" ,
+			count : 20
+		}).execute(function (response) { 
 			alert(response);
 			if (response.error) { 
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
