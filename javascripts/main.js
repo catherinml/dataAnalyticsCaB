@@ -4464,7 +4464,8 @@ $("input[type='radio']").change(function () {
 	$("#grouptable").css("display","none");
 
 	$("#spacetable").css("display","block");
-		osapi.spaces.get({ 
+	alert("hello");
+	/*	osapi.spaces.get({ 
 			limit :30 
 			
 		}).execute(function (response) { 
@@ -4486,7 +4487,7 @@ $("input[type='radio']").change(function () {
   					  					gadgets.window.adjustHeight();
 				}
 			} 
-		});
+		});*/
 	}
     });
 
