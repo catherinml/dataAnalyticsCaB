@@ -4459,7 +4459,7 @@ $("input[type='radio']").change(function () {
 	else if (typeID == "@all"  && grouporspace =="group"){
 		$("#grouptable").css("display","none");
 	}
-	else (typeID == "@self" && grouporspace =="space" ) {
+	else if (typeID == "@self" && grouporspace =="space" ) {
 
 	$("#grouptable").css("display","none");
 
