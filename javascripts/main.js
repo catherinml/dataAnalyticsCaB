@@ -4473,7 +4473,7 @@ $("input[type='radio']").change(function () {
 			} 
 			else { 
 				if (response.list) {
-
+					alert(response.list);
 					var spaces = response.list; 
 					var html = "";
 										$(spaces).each(function(index, group) 					{
