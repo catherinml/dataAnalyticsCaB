@@ -4395,11 +4395,13 @@ var json = {"graphNodeDetails":
 
 });
 
-  $("#jivegroupspace").click(function() {
+  //$("#jivegroupspace").click(function() {
+
+$("input[type='radio']").change(function () {
 	
 	var typeID = $("#typeofrelationship").val();
-	var grouporspace = $("#jivegroupspace").val();
-	alert(grouporspace);
+	var grouporspace = $(this).val();
+	alert($(this).val());
 	$("#selectgroup").html("");
 	if (typeID == "@self" ) {
 	$("#grouptable").css("display","block");
