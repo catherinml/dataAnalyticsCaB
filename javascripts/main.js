@@ -4460,14 +4460,13 @@ $("input[type='radio']").change(function () {
 		$("#grouptable").css("display","none");
 	}
 	else (typeID == "@self" && grouporspace =="space" ) {
+
 	$("#grouptable").css("display","none");
 
 	$("#spacetable").css("display","none");
 		osapi.spaces.get({ 
-			userId : "@me", 
-			groupId : "@self", 
-			sortBy : "title", 
-			sortOrder : "ascending" 
+			limit :30 
+			
 		}).execute(function (response) { 
 			if (response.error) { 
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
