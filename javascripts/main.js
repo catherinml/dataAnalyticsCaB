@@ -4463,7 +4463,7 @@ $("input[type='radio']").change(function () {
 
 	$("#grouptable").css("display","none");
 
-	$("#spacetable").css("display","none");
+	$("#spacetable").css("display","block");
 		osapi.spaces.get({ 
 			limit :30 
 			
