@@ -4389,10 +4389,17 @@ var json = {"graphNodeDetails":
 		{"source":242,"target":243,"value":1}]
 }
 }
+ $("#typeofrelationship").change(function() {
+	$("#tabletdrdgroup").css("display","block");
+	$("#tabletdrdspace").css("display","block");
 
-  $("#typeofrelationship").change(function() {
+});
+
+  $("#jivegroupspace").click(function() {
 	
 	var typeID = $("#typeofrelationship").val();
+	var grouporspace = $("#jivegroupspace").val();
+	alert(grouporspace);
 	$("#selectgroup").html("");
 	if (typeID == "@self" ) {
 	$("#grouptable").css("display","block");
