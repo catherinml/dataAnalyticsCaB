@@ -4466,25 +4466,27 @@ $("input[type='radio']").change(function () {
 	$("#spacetable").css("display","block");
 	
 		osapi.jive.core.spaces.get({limit :20}).execute(function (response) { 
-			alert(response.data[0].id);
-			alert(response.data.length);
+			
 			if (response.error) {
 				
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
 			} 
 			else { 
-				//if (response.data.list) {
+				if (response.data.length != 0) {
 
-					var spaces = response.list; 
+					var spaces = response.data; 
 					var html = "";
-										$(spaces).each(function(index, space) 					{
-		alert(space);										html += "<option value=" + space.id + ">" + space.name + "</option>";
+										 
+//$(spaces).each(function(index, space)
+for(int i = 0 ; i < spaces.length ; i ++)
+{
+		html += "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
 			         
-        				});
+    }
 	$('#selectspace').attr('multiple',false);	
 	$("#selectspace").html(html);
   					  					gadgets.window.adjustHeight();
-				//}
+				}
 			} 
 		});
 	}
