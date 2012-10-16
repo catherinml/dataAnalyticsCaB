@@ -4472,7 +4472,7 @@ $("input[type='radio']").change(function () {
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
 			} 
 			else { 
-				alert(response.next);
+				alert(response.data.next);
 				if (response.data.length > 0) {
 
 					var spaces = response.data; 
