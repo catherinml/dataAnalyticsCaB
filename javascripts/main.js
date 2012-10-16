@@ -4473,19 +4473,18 @@ $("input[type='radio']").change(function () {
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
 			} 
 			else { 
-				if (response.data.list) {
-					alert("inside else if");
-					alert(response.list);
+				//if (response.data.list) {
+
 					var spaces = response.list; 
 					var html = "";
 										$(spaces).each(function(index, space) 					{
-												html += "<option value=" + space.id + ">" + space.name + "</option>";
+		alert(space);										html += "<option value=" + space.id + ">" + space.name + "</option>";
 			         
         				});
 	$('#selectspace').attr('multiple',false);	
 	$("#selectspace").html(html);
   					  					gadgets.window.adjustHeight();
-				}
+				//}
 			} 
 		});
 	}
