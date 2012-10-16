@@ -4398,11 +4398,10 @@ var json = {"graphNodeDetails":
  $("#selectspace").change(function() {
 	alert($("#selectspace").val());
 $(document).ready(function(){
-	$.getJSON("http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",function(data) {
-			alert(data);
-    			$.each(data.items, function(i,item){
-      			alert(item);
-     		});
+	alert("hello");
+	$.ajax({url:"http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",success:function(result){
+			alert(result);
+    			
   	});
 });
 });
