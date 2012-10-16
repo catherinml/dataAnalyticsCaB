@@ -4478,7 +4478,7 @@ $("input[type='radio']").change(function () {
 					var html = "";
 										 
 //$(spaces).each(function(index, space)
-for(int i = 0 ; i < spaces.length ; i ++)
+for(var i = 0 ; i < spaces.length ; i ++)
 {
 		html += "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
 			         
