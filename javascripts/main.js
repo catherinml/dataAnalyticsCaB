@@ -4397,14 +4397,16 @@ var json = {"graphNodeDetails":
 
  $("#selectspace").change(function() {
 	alert($("#selectspace").val());
-	
-	alert("hello");$(document).ready(function() {
+	$(document).ready(function() {
+	alert("hello");
 	$.ajax({
 		url:"http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
+		dataType: "json",
 		success:function(result){
 			alert(result);
     			
-  	}});
+  		}
+	});
 });
 });
 
