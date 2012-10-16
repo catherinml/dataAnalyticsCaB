@@ -4467,13 +4467,13 @@ $("input[type='radio']").change(function () {
 	
 		osapi.jive.core.spaces.get({limit :20}).execute(function (response) { 
 			alert(response.data[0].id);
-			alert(response.list);
+			alert(response.data.list);
 			if (response.error) {
 				
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
 			} 
 			else { 
-				if (response.list) {
+				if (response.data.list) {
 					alert("inside else if");
 					alert(response.list);
 					var spaces = response.list; 
