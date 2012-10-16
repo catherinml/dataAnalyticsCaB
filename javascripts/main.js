@@ -4528,9 +4528,11 @@ url: "/api/core/v2/spaces/2005/children",
 method: 'GET',
 dataType: 'json',
 success: function(data) {
+	alert("success");
 alert(data);
 },
 error: function(ex) {
+	alert("failure");
 alert(ex);
 },
 complete: function() { }
