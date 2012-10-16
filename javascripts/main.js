@@ -4523,6 +4523,7 @@ $("#displaygraph").click(function() {
 	$("#divjivedata").css("display","none");
 	$("#divjivegraph").css("display","block");
 	gadgets.window.adjustHeight();
+$(document).ready(function(){
  $.ajax({
 url: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
 method: 'GET',
@@ -4534,8 +4535,10 @@ alert(data);
 error: function(ex) {
 	alert("failure");
 alert(ex);
+alert(ex[0].data);
 },
 complete: function() { }
+});
 });
 
 
