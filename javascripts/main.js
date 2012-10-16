@@ -4518,14 +4518,21 @@ $("input[type='radio']").change(function () {
 
 	
 
-$("#displaygraph").click(function() {
+/*$("#displaygraph").click(function() {
 	$("#graphdata").css("display","none");
 	$("#divjivedata").css("display","none");
 	$("#divjivegraph").css("display","block");
 	gadgets.window.adjustHeight();
 
-});
+});*/
 
+$(document).ready(function(){
+$("displaygraph").click(function(){
+  $.ajax({url:"http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",success:function(result){
+    alert(result);
+  }});
+});
+});
 
 
 
