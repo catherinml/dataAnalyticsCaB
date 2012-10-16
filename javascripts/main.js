@@ -4474,18 +4474,18 @@ $("input[type='radio']").change(function () {
 			else { 
 				if (response.data.length > 0) {
 
-				/*	var spaces = response.data; 
+					var spaces = response.data; 
 					var html = "";
 										 
 //$(spaces).each(function(index, space)
-for(var i = 0 ; i < spaces.length ; i ++)
-{
-		html += "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
+					for(var i = 0 ; i < spaces.length ; i ++)
+					{
+						html += "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
 			         
-    }
-	$('#selectspace').attr('multiple',false);	
-	$("#selectspace").html(html);
-  					  					gadgets.window.adjustHeight();*/
+    					}
+					$('#selectspace').attr('multiple',false);	
+					$("#selectspace").html(html);
+  					  												gadgets.window.adjustHeight();
 				}
 			} 
 		});
