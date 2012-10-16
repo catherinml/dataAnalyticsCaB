@@ -4398,13 +4398,14 @@ var json = {"graphNodeDetails":
  $("#selectspace").change(function() {
 	alert($("#selectspace").val());
 	
-	alert("hello");
+	alert("hello");$(document).ready(function() {
 	$.ajax({
 		url:"http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
 		success:function(result){
 			alert(result);
     			
   	}});
+});
 });
 
 
