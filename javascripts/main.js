@@ -4397,6 +4397,16 @@ var json = {"graphNodeDetails":
 
  $("#selectspace").change(function() {
 	alert($("#selectspace").val());
+	$.getJSON("http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
+  		{
+    			format: "json"
+  		},
+  		function(data) {
+			alert(data);
+    			$.each(data.items, function(i,item){
+      		alert(item);
+     		});
+  	});
 });
 
 
@@ -4471,7 +4481,7 @@ $("input[type='radio']").change(function () {
 	$("#spacetable").css("display","block");
 	
 	 
-		osapi.jive.core.spaces.get({contextId: "@2005", contextType: "@space"}).execute(function(response) {
+		osapi.jive.core.spaces.get({contextId: "@viewer", contextType: "@person"}).execute(function(response) {
 			
 			if (response.error) {
 				
