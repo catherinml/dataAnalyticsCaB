@@ -4471,7 +4471,7 @@ $("input[type='radio']").change(function () {
 	$("#spacetable").css("display","block");
 	
 	 
-		osapi.jive.core.spaces.get({contextId: "@viewer", contextType: "@person"}).execute(function(response) {
+		osapi.jive.core.spaces.get({contextId: "@2005", contextType: "@space"}).execute(function(response) {
 			
 			if (response.error) {
 				
