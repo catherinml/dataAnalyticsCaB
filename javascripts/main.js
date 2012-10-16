@@ -4465,7 +4465,7 @@ $("input[type='radio']").change(function () {
 
 	$("#spacetable").css("display","block");
 	
-		osapi.jive.core.spaces.get({limit:2}).execute(function (response) { 
+		osapi.jive.core.spaces.get({limit:30}).execute(function (response) { 
 			
 			if (response.error) {
 				
