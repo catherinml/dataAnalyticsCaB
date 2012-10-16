@@ -4530,7 +4530,7 @@ $("#displaygraph").click(function() {
 href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
 format: 'json'
 }).execute(function(response) {
-alert(response.error);
+alert(response.error.message);
 });
 
 });
