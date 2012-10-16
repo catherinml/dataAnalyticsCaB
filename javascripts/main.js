@@ -4527,7 +4527,7 @@ $("#displaygraph").click(function() {
 
 
 	osapi.http.get({
-href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
+href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces",
 format: 'json'
 }).execute(function(response) {
 alert(response.error.message);
