@@ -4535,7 +4535,7 @@ alert(data);
 error: function(ex) {
 	alert("failure");
 alert(ex);
-alert(ex[0].data);
+alert(ex.data);
 },
 complete: function() { }
 });
