@@ -4395,6 +4395,11 @@ var json = {"graphNodeDetails":
 
 });
 
+ $("#selectspace").change(function() {
+	alert($("#selectspace").val());
+});
+
+
   //$("#jivegroupspace").click(function() {
 
 $("input[type='radio']").change(function () {
@@ -4467,7 +4472,7 @@ $("input[type='radio']").change(function () {
 	
 	 
 		osapi.jive.core.spaces.get({contextId: "@viewer", contextType: "@person"}).execute(function(response) {
-			alert(response.totalResults);
+			
 			if (response.error) {
 				
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
