@@ -4518,14 +4518,27 @@ $("input[type='radio']").change(function () {
 
 	
 
-/*$("#displaygraph").click(function() {
+$("#displaygraph").click(function() {
 	$("#graphdata").css("display","none");
 	$("#divjivedata").css("display","none");
 	$("#divjivegraph").css("display","block");
 	gadgets.window.adjustHeight();
+ $.ajax({
+url: "/api/core/v2/spaces/2005/children",
+method: 'GET',
+dataType: 'json',
+success: function(data) {
+alert(data);
+},
+error: function(ex) {
+alert(ex);
+},
+complete: function() { }
+});
+
 
 });
-*/
+
 
 
 
@@ -4833,10 +4846,3 @@ function renderUserFromTable(users) {
    //gadgets.window.adjustHeight();
 }
 
-$(document).ready(function(){
-$("displaygraph").click(function(){
-	alert("helo");
-  $.ajax({url:"http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",success:function(result){
-    alert(result);
-  }});
-});
