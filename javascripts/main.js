@@ -4524,15 +4524,8 @@ $("input[type='radio']").change(function () {
 	$("#divjivegraph").css("display","block");
 	gadgets.window.adjustHeight();
 
-});*/
-
-$(document).ready(function(){
-$("displaygraph").click(function(){
-  $.ajax({url:"http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",success:function(result){
-    alert(result);
-  }});
 });
-});
+*/
 
 
 
@@ -4839,3 +4832,10 @@ function renderUserFromTable(users) {
   
    //gadgets.window.adjustHeight();
 }
+
+$(document).ready(function(){
+$("displaygraph").click(function(){
+  $.ajax({url:"http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",success:function(result){
+    alert(result);
+  }});
+});
