@@ -4524,7 +4524,7 @@ $("#displaygraph").click(function() {
 	$("#divjivegraph").css("display","block");
 	gadgets.window.adjustHeight();
  $.ajax({
-url: "/api/core/v2/spaces/2005/children",
+url: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
 method: 'GET',
 dataType: 'json',
 success: function(data) {
