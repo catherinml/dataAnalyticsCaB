@@ -4835,6 +4835,7 @@ function renderUserFromTable(users) {
 
 $(document).ready(function(){
 $("displaygraph").click(function(){
+	alert("helo");
   $.ajax({url:"http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",success:function(result){
     alert(result);
   }});
