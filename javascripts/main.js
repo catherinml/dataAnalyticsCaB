@@ -4410,9 +4410,9 @@ var json = {"graphNodeDetails":
 	});
 });*/
 
-$.getJSON("http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",function(data){
-	alert(data);
-});
+  $.ajax({url:"api/core/v2/spaces/2005/children",success:function(result){
+    alert(result);
+  }});
 
 });
 
