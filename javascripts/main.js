@@ -4465,14 +4465,14 @@ $("input[type='radio']").change(function () {
 
 	$("#spacetable").css("display","block");
 	
-		osapi.jive.core.spaces.get({limit :20}).execute(function (response) { 
+		osapi.jive.core.spaces.get({limit:2}).execute(function (response) { 
 			
 			if (response.error) {
 				
 				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
 			} 
 			else { 
-				alert(response.data.next());
+
 				if (response.data.length > 0) {
 
 					var spaces = response.data; 
