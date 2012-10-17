@@ -4528,8 +4528,8 @@ $("#displaygraph").click(function() {
 			osapi.http.get({
 href: "http://shoe.io/location/json",format: 'json'
 }).execute(function(response) {
-alert(response.error.message);
-alert(response.content);
+//alert(response.error.message);
+alert(response.;
 
 });
 
