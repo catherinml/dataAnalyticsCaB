@@ -4412,8 +4412,8 @@ var json = {"graphNodeDetails":
 $(document).ready(function(){
   $.ajax({url:"api/core/v2/spaces/2005/children",success:function(result){
     alert(result);
-  }
-error : function(XMLHttpRequest, textStaterrorThrownus, errorThrown) {
+  },
+error: function(XMLHttpRequest, textStatus, errorThrown) {
 	alert(errorThrown);
 }
 });
