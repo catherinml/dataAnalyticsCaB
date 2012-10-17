@@ -4527,7 +4527,7 @@ $("#displaygraph").click(function() {
 
  $.ajax({
 
-          url : "/api/core/v2/attachments/", 
+          url : "/api/core/v2/spaces/2005/children", 
 		dataType: 'json',
 
             type: 'GET',
