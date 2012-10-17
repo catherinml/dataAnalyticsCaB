@@ -4536,8 +4536,11 @@ dataType: 'json',
 success: function(data) {
 	alert(data);
 },
-error: function(ex) {
-	alert(ex);
+function(XMLHttpRequest, textStatus, errorThrown) {
+	alert(errorThrown);
+	errorThrown.replace(/^throw [^;]*;/, '');
+      var activities = $.parseJSON(errorThrown);
+	alert(activities);
 },
 complete: function() { }
 });
