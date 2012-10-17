@@ -4536,7 +4536,7 @@ dataType: 'json',
 success: function(data) {
 	alert(data);
 },
-function(XMLHttpRequest, textStatus, errorThrown) {
+error : function(XMLHttpRequest, textStatus, errorThrown) {
 	alert(errorThrown);
 	errorThrown.replace(/^throw [^;]*;/, '');
       var activities = $.parseJSON(errorThrown);
