@@ -4529,7 +4529,7 @@ $("#displaygraph").click(function() {
 href: "http://shoe.io/location/json",format: 'json'
 }).execute(function(response) {
 //alert(response.error.message);
-alert(response.locations);
+alert(response.content.locations);
 
 });
 
