@@ -4529,7 +4529,7 @@ $("#displaygraph").click(function() {
 params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
 gadgets.io.makeRequest("http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
 function(data){
-alert(data.data);
+alert(data);
 },
 params);
 
