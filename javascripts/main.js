@@ -4530,6 +4530,9 @@ $("#displaygraph").click(function() {
 href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces",
 format: 'json'
 }).execute(function(response) {
+var escaped = data.replace(/^throw [^;]*;/, '');
+
+ alert(JSON.parse(escaped));
 alert(response.error.message);
 });
 
