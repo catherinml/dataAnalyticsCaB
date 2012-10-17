@@ -4411,6 +4411,8 @@ var json = {"graphNodeDetails":
 });*/
 $(document).ready(function(){
   $.ajax({url:"/api/core/v2/spaces/2005/children",
+     dataType: 'json',
+     type: 'GET',
 	beforeSend: function(xhr) {
                
              xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==")
@@ -4422,6 +4424,7 @@ error: function(XMLHttpRequest, textStatus, errorThrown) {
 	alert(errorThrown);
 	alert(textStatus);
 	errorThrown.replace(/^throw [^;]*;/, '');
+	alert(errorThrown);
      var activities = $.parseJSON(errorThrown);
 	alert(activities);
 }
