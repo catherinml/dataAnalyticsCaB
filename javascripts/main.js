@@ -4532,11 +4532,11 @@ alert(response.error.message);
 });
 
  $(document).ready(function(){
-
+	alert("document");
     $.getJSON("http://mdbitz.com/testing/PHPYahooFinance/finance.php?symbol=GOOG&callback=?",
 
         function(data){
-        alert(data.symbol + " " + data.lastTrade + " " + data.lastTradeTime + " " + data.change);
+        alert("inside");
 
         });
 
