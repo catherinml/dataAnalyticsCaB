@@ -4526,9 +4526,11 @@ $("#displaygraph").click(function() {
 	
 
 			osapi.http.get({
-href: "http://mdbitz.com/testing/PHPYahooFinance/finance.php?symbol=GOOG&callback=?",format: 'json'
+href: "http://shoe.io/location/json",format: 'json'
 }).execute(function(response) {
 alert(response.error.message);
+alert(response.content);
+
 });
 
  
