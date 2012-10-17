@@ -4410,7 +4410,12 @@ var json = {"graphNodeDetails":
 	});
 });*/
 $(document).ready(function(){
-  $.ajax({url:"/api/core/v2/spaces/2005/children",success:function(result){
+  $.ajax({url:"/api/core/v2/spaces/2005/children",
+	beforeSend: function(xhr) {
+               
+             xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==")
+            },
+	success:function(result){
     alert(result);
   },
 error: function(XMLHttpRequest, textStatus, errorThrown) {
