@@ -4415,6 +4415,7 @@ $(document).ready(function(){
   },
 error: function(XMLHttpRequest, textStatus, errorThrown) {
 	alert(errorThrown);
+	alert(textStatus);
 }
 });
 });
