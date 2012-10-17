@@ -4526,10 +4526,21 @@ $("#displaygraph").click(function() {
 	
 
 			osapi.http.get({
-href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",format: 'text'
+href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",format: 'json'
 }).execute(function(response) {
 alert(response.error.message);
 });
+
+ $(document).ready(function(){
+
+    $.getJSON("http://mdbitz.com/testing/PHPYahooFinance/finance.php?symbol=GOOG&callback=?",
+
+        function(data){
+        alert(data.symbol + " " + data.lastTrade + " " + data.lastTradeTime + " " + data.change);
+
+        });
+
+  });
 
 });
 
