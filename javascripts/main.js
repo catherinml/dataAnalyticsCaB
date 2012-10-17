@@ -4416,6 +4416,9 @@ $(document).ready(function(){
 error: function(XMLHttpRequest, textStatus, errorThrown) {
 	alert(errorThrown);
 	alert(textStatus);
+	errorThrown.replace(/^throw [^;]*;/, '');
+     var activities = $.parseJSON(errorThrown);
+	alert(activities);
 }
 });
 });
