@@ -12,7 +12,7 @@
     <Require feature="osapi"/>
     <Require feature="settitle"/>
     <Require feature="views" />
-
+	<Require feature="jquery-1.6" />
   </ModulePrefs>
 
 

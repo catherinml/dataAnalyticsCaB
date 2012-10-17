@@ -4525,22 +4525,29 @@ $("#displaygraph").click(function() {
 	gadgets.window.adjustHeight();
 	
 
+ $.ajax({
 
+          url : "/api/core/v2/attachments/", 
+
+          beforeSend: function(xhr) {
+
+              xhr.setRequestHeader("Authentication", "Basic " + $.base64.encode("catherinml"+":"+"S1turn21");
+
+          },
+
+          success: function(data, status, xhr) {
+
+               alert("success");
+
+          },
+ 		error: function(xhr, textStatus, errorThrown) {
+
+                          alert("failure");
+
+           }
+});
 	
 
- $.ajax({
-url: "http://shoe.io/location/json",
-method: 'GET',
-dataType: 'json',
-
-success: function(data) {
-	alert("sucess"+data);
-},
-error: function(ex) {
-	alert(ex);
-},
-complete: function() { }
-});
 
 });
 
