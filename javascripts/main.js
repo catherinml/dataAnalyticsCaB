@@ -4526,17 +4526,20 @@ $("#displaygraph").click(function() {
 	
 
 
-	osapi.http.get({
-href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces",
-format: 'json'
-}).execute(function(response) {
-alert(response);
-alert(response.data);
+	
 
-var escaped = response.data.replace(/^throw [^;]*;/, '');
+ $.ajax({
+url: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces",
+method: 'GET',
+dataType: 'json',
 
- alert(JSON.parse(escaped));
-alert(response.error.message);
+success: function(data) {
+	alert(data);
+},
+error: function(ex) {
+	alert(ex);
+},
+complete: function() { }
 });
 
 });
