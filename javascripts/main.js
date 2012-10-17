@@ -4537,6 +4537,7 @@ success: function(data) {
 	alert(data);
 },
 error : function(XMLHttpRequest, textStatus, errorThrown) {
+	alert(textStatus);
 	alert(errorThrown);
 	errorThrown.replace(/^throw [^;]*;/, '');
       var activities = $.parseJSON(errorThrown);
