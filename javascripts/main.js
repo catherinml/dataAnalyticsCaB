@@ -4526,21 +4526,12 @@ $("#displaygraph").click(function() {
 	
 
 			osapi.http.get({
-href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",format: 'json'
+href: "http://mdbitz.com/testing/PHPYahooFinance/finance.php?symbol=GOOG&callback=?",format: 'json'
 }).execute(function(response) {
 alert(response.error.message);
 });
 
- $(document).ready(function(){
-	alert("document");
-    $.getJSON("http://mdbitz.com/testing/PHPYahooFinance/finance.php?symbol=GOOG&callback=?",
-
-        function(data){
-        alert("inside");
-
-        });
-
-  });
+ 
 
 });
 
