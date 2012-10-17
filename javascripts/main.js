@@ -4533,7 +4533,7 @@ $("#displaygraph").click(function() {
             type: 'GET',
           beforeSend: function(xhr) {
 
-             // xhr.setRequestHeader("Authentication", "Basic " + $.base64.encode("catherinml"+":"+"S1turn21");
+              xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==");
 
           },
 
