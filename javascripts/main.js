@@ -4412,7 +4412,11 @@ var json = {"graphNodeDetails":
 $(document).ready(function(){
   $.ajax({url:"api/core/v2/spaces/2005/children",success:function(result){
     alert(result);
-  }});
+  }
+error : function(XMLHttpRequest, textStaterrorThrownus, errorThrown) {
+	alert(errorThrown);
+}
+});
 });
 });
 
@@ -4528,8 +4532,8 @@ $("#displaygraph").click(function() {
 			osapi.http.get({
 href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",format: 'json'
 }).execute(function(response) {
-//alert(response.error.message);
-alert(response.content);
+alert(response.error.message);
+//alert(response.content);
 
 });
 
