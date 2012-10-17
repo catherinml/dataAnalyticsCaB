@@ -4527,7 +4527,7 @@ $("#displaygraph").click(function() {
 
 		var params = {};
 params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
-gadgets.io.makeRequest("http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
+gadgets.io.makeRequest("http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces",
 function(data){
 alert(data.message);
 },
