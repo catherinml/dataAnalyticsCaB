@@ -4528,10 +4528,12 @@ $("#displaygraph").click(function() {
  $.ajax({
 
           url : "/api/core/v2/attachments/", 
+		dataType: 'json',
 
+            type: 'GET',
           beforeSend: function(xhr) {
 
-              xhr.setRequestHeader("Authentication", "Basic " + $.base64.encode("catherinml"+":"+"S1turn21");
+             // xhr.setRequestHeader("Authentication", "Basic " + $.base64.encode("catherinml"+":"+"S1turn21");
 
           },
 
