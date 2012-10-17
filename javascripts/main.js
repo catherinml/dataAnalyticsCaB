@@ -4525,31 +4525,12 @@ $("#displaygraph").click(function() {
 	gadgets.window.adjustHeight();
 	
 
- $.ajax({
-
-          url : "/api/core/v2/spaces/2005/children", 
-		dataType: 'json',
-
-            type: 'GET',
-          beforeSend: function(xhr) {
-
-              xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==");
-
-          },
-
-          success: function(data, status, xhr) {
-
-               alert("success");
-
-          },
- 		error: function(xhr, textStatus, errorThrown) {
-
-                          alert("failure");
-
-           }
+	osapi.http.get({
+href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
+format: 'json'
+}).execute(function(response) {
+	alert(response.content);
 });
-	
-
 
 });
 
