@@ -4537,7 +4537,7 @@ success: function(data) {
 	alert(data);
 },
 error: function(ex) {
-	alert(ex.message);
+	alert(ex.error.message);
 },
 complete: function() { }
 });
