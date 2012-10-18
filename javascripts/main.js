@@ -4587,10 +4587,12 @@ function getFollowers(spaceId) {
 			var jsonResponse = XMLHttpRequest.responseText;
 				jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
 				var jsonResponseCleaned  = $.parseJSON(jsonResponse);
-		
+				alert(jsonResponseCleaned.id );
 				if (jsonResponseCleaned.id == "2407") {
+					alert("true");
 					return "true";
 				} else  {
+					alert("false");
 					return "false";
 				}
 		
