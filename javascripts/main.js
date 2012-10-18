@@ -4553,7 +4553,7 @@ $("input[type='radio']").change(function () {
 								 
 					for(var i = 0 ; i < spaces.length ; i ++)
 					{
-						getFollowers(spaces[i].id);
+						getFollowers(spaces[i].id,spaces[i].name);
 						
 						if (isFollower == "true"){
 							
@@ -4571,7 +4571,7 @@ $("input[type='radio']").change(function () {
 
     });
 
-function getFollowers(spaceId) {
+function getFollowers(spaceId,spaceName) {
 		$(document).ready(function(){
 		  var spaces = "/api/core/v2/spaces/"+spaceId+"/followers/2407";
   		$.ajax({url:spaces,
@@ -4593,11 +4593,13 @@ function getFollowers(spaceId) {
 				if (jsonResponseCleaned.id == "2407") {
 					
 					isFollower="true";
-					
-				} else  {
-					
-					isFollower="false";
-				}
+					var html = "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
+					var currenthtml = $("#selectspace").html();
+					alert(currenthtml);
+					$("#selectspace").html(currenthtml+ html);
+					alert($("#selectspace").html(currenthtml+ html));
+
+				} 
 		
 			}
  		});
