@@ -4414,23 +4414,16 @@ $(document).ready(function(){
      type: 'GET',
 	beforeSend: function(xhr) {
                
-           //  xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==")
+             xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==")
             },
 	success:function(result){
     alert(result);
   },
 error: function(XMLHttpRequest, textStatus, errorThrown) {
-	//errorThrown.replace(/^throw [^;]*;/, '');
-	alert(errorThrown);
-    // var activities = $.parseJSON(errorThrown);
-	alert("responseText");
-	alert(XMLHttpRequest.responseText);
+	
 	var jsonResponse = XMLHttpRequest.responseText;
 	jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
-	alert(jsonResponse);
 	var jsonResponseCleaned  = $.parseJSON(jsonResponse);
-	alert(jsonResponseCleaned );
-
 }
 });
 });
@@ -4548,7 +4541,8 @@ $("#displaygraph").click(function() {
 			osapi.http.get({
 href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",format: 'json'
 }).execute(function(response) {
-alert(response.error.message);
+  alert(response.data);
+//alert(response.error.message);
 //alert(response.content);
 
 });
