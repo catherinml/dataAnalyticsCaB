@@ -4589,6 +4589,8 @@ function getFollowers(spaceId,spaceName) {
 					var currenthtml=$("#selectspace").html();
 					
 					var finalHtml = currenthtml +html;
+					$("#spacetable").css("display","block");
+
 					$("#selectspace").css("display","block");
 					$("#selectspace").html(finalHtml);
 					$('#selectspace').attr('multiple',false);	
