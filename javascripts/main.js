@@ -4599,7 +4599,7 @@ function getFollowers(spaceId) {
 			}
  		});
 	});
-	alert("fdsf:"+isFollowed)
+	alert("fdsf:"+isFollowed);
 	return isFollowed;
 }
 
