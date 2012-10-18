@@ -4414,6 +4414,16 @@ $(document).ready(function(){
 		jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
 		var jsonResponseCleaned  = $.parseJSON(jsonResponse);
 		alert(jsonResponseCleaned.data);
+		alert("length"+jsonResponseCleaned.data.length );
+		var html ="";
+		for(var i = 0 ; i < jsonResponseCleaned.data.length ; i ++)
+		{
+			html += "<option value=" + jsonResponseCleaned.data[i].id + ">" + jsonResponseCleaned.data[i].name + "</option>";
+			         
+    		}
+		$('#selectsubspaces').attr('multiple',false);	
+		$("#selectsubspaces").html(html);
+  					  									gadgets.window.adjustHeight();
 	}
 });
 });
