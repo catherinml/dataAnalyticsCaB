@@ -4425,6 +4425,9 @@ $(document).ready(function(){
 		$('#selectsubspaces').attr('multiple',false);	
 		$("#selectsubspaces").html(html);
   		$("#selectsubspaces").css("display","block");		  									gadgets.window.adjustHeight();
+		} else {
+			$("#selectsubspaces").html("");
+			$("#selectsubspaces").css("display","none");
 		}
 	}
 });
