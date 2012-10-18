@@ -4555,7 +4555,7 @@ $("input[type='radio']").change(function () {
 					{
 						isFollower = getFollowers(spaces[i].id);
 						alert(isFollower)
-						if (isFollower == "true")
+						if (isFollower == "true"){
 							html += "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
 			         		}
     					}
