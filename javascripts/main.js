@@ -4416,6 +4416,7 @@ $(document).ready(function(){
 		
 		
 		var html ="";
+		if (jsonResponseCleaned.data.length > 0) {
 		for(var i = 0 ; i < jsonResponseCleaned.data.length ; i ++)
 		{
 			html += "<option value=" + jsonResponseCleaned.data[i].id + ">" + jsonResponseCleaned.data[i].name + "</option>";
@@ -4423,7 +4424,8 @@ $(document).ready(function(){
     		}
 		$('#selectsubspaces').attr('multiple',false);	
 		$("#selectsubspaces").html(html);
-  					  									gadgets.window.adjustHeight();
+  		$("#selectsubspaces").css("display","block");		  									gadgets.window.adjustHeight();
+		}
 	}
 });
 });
