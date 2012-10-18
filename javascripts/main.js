@@ -4395,7 +4395,7 @@ var json = {"graphNodeDetails":
 
 });
 
- $("#selectspace").change(function() {
+ $("#selectspace").click(function() {
 
 $(document).ready(function(){
   var subSpaces = "/api/core/v2/spaces/"+$("#selectspace").val()+"/children";
@@ -4413,8 +4413,8 @@ $(document).ready(function(){
 		var jsonResponse = XMLHttpRequest.responseText;
 		jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
 		var jsonResponseCleaned  = $.parseJSON(jsonResponse);
-		alert(jsonResponseCleaned.data);
-		alert("length"+jsonResponseCleaned.data.length );
+		
+		
 		var html ="";
 		for(var i = 0 ; i < jsonResponseCleaned.data.length ; i ++)
 		{
