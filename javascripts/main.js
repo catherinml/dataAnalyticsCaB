@@ -4571,7 +4571,7 @@ $("input[type='radio']").change(function () {
 
 function getFollowers(spaceId) {
 	var isFollowed="false";
-	$(document).ready(function(){
+	//$(document).ready(function(){
 		  var spaces = "/api/core/v2/spaces/"+spaceId+"/followers/2407";
   		$.ajax({url:spaces,
      			dataType: 'json',
@@ -4600,7 +4600,7 @@ function getFollowers(spaceId) {
 		
 			}
  		});
-	});
+	//});
 	alert(isFollowed);
 	return isFollowed;
 }
