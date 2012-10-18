@@ -1,7 +1,7 @@
 
 
 gadgets.util.registerOnLoadHandler(function() {
-var isFollower;	
+var isFollower="false";	
 var json = {"graphNodeDetails":
 {
 "nodes": 
@@ -4554,9 +4554,11 @@ $("input[type='radio']").change(function () {
 					for(var i = 0 ; i < spaces.length ; i ++)
 					{
 						getFollowers(spaces[i].id);
-						alert(isFollower);
+						
 						if (isFollower == "true"){
+							
 							html += "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
+							alert(html);
 			         		}
     					}
 					$('#selectspace').attr('multiple',false);	
