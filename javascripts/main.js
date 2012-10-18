@@ -4498,7 +4498,7 @@ $("input[type='radio']").change(function () {
 			} 
 		});
 	} // end else if
-	else if (typeID == "@all"  && grouporspace =="group"){
+	else if (typeID == "@selected"  && grouporspace =="group"){
 		$("#grouptable").css("display","none");
 		$("#spacetable").css("display","none");
 	}
@@ -4535,9 +4535,67 @@ $("input[type='radio']").change(function () {
 			} 
 		});
 	}
+	
+	else if (typeID == "@self" && grouporspace =="space" ) {
+
+		osapi.jive.core.spaces.get({contextId: "@viewer", contextType: "@person"}).execute(function(response) {
+			
+			if (response.error) {
+				
+				alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message); 
+			} 
+			else { 
+			
+				if (response.data.length > 0) {
+
+					var spaces = response.data; 
+					var html = "";
+					var isFollower;				 
+					for(var i = 0 ; i < spaces.length ; i ++)
+					{
+						isFollower = getFollowers(spaces[i].id);
+						alert(isFollower)
+						if (isFollower == "true")
+							html += "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
+			         		}
+    					}
+					$('#selectspace').attr('multiple',false);	
+					$("#selectspace").html(html);
+  					  												gadgets.window.adjustHeight();
+				}
+			} 
+		});
+	}
+
     });
 
+function getFollowers(spaceId) {
+	$(document).ready(function(){
+  		var spaces = "/api/core/v2/spaces/"+spaceId+"/followers/2427";
+  		$.ajax({url:spaces,
+     			dataType: 'json',
+     			type: 'GET',
+			beforeSend: function(xhr) {
+               
+             			xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==")
+            		},
+			success:function(result){
+    		 	},
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
 	
+				var jsonResponse = XMLHttpRequest.responseText;
+				jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
+				var jsonResponseCleaned  = $.parseJSON(jsonResponse);
+		
+				alert(jsonResponseCleaned);
+				alert(errorThrown);
+				alert(jsonResponseCleaned.id);
+
+				return "true";
+			}
+ 		});
+	});
+}
 
 $("#displaygraph").click(function() {
 	$("#graphdata").css("display","none");
