@@ -4444,6 +4444,7 @@ $("input[type='radio']").change(function () {
 	
 	$("#selectgroup").html("");
 	if (typeID == "@self" && grouporspace =="group" ) {
+	$("#spacetable").css("display","none");
 	$("#grouptable").css("display","block");
 		osapi.groups.get({ 
 			userId : "@me", 
@@ -4470,6 +4471,7 @@ $("input[type='radio']").change(function () {
 			} 
 		});
 	} else if (typeID == "@selected"  && grouporspace =="group") {
+		$("#spacetable").css("display","none");
 		$('#selectgroup').attr('multiple',true);	
 		$("#grouptable").css("display","block");
 		osapi.groups.get({ 
@@ -4498,6 +4500,7 @@ $("input[type='radio']").change(function () {
 	} // end else if
 	else if (typeID == "@all"  && grouporspace =="group"){
 		$("#grouptable").css("display","none");
+		$("#spacetable").css("display","none");
 	}
 	else if (typeID == "@self" && grouporspace =="space" ) {
 
