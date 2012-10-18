@@ -4539,10 +4539,10 @@ $("#displaygraph").click(function() {
 	
 
 			osapi.http.get({
-href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",format: 'json'
+href: 'http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children'
 }).execute(function(response) {
   alert(response.data);
-//alert(response.error.message);
+alert(response.error.message);
 //alert(response.content);
 
 });
