@@ -4571,6 +4571,7 @@ $("input[type='radio']").change(function () {
 
 function getFollowers(spaceId) {
 	$(document).ready(function(){
+		alert(spaceId);
   		var spaces = "/api/core/v2/spaces/"+spaceId+"/followers/2427";
   		$.ajax({url:spaces,
      			dataType: 'json',
