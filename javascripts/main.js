@@ -1,7 +1,7 @@
 
 
 gadgets.util.registerOnLoadHandler(function() {
-
+var isFollower;	
 var json = {"graphNodeDetails":
 {
 "nodes": 
@@ -4550,10 +4550,10 @@ $("input[type='radio']").change(function () {
 
 					var spaces = response.data; 
 					var html = "";
-					var isFollower;				 
+								 
 					for(var i = 0 ; i < spaces.length ; i ++)
 					{
-						isFollower = getFollowers(spaces[i].id);
+						getFollowers(spaces[i].id);
 						alert(isFollower);
 						if (isFollower == "true"){
 							html += "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
@@ -4570,8 +4570,7 @@ $("input[type='radio']").change(function () {
     });
 
 function getFollowers(spaceId) {
-	var isFollowed="true";
-	$(document).ready(function(){
+		$(document).ready(function(){
 		  var spaces = "/api/core/v2/spaces/"+spaceId+"/followers/2407";
   		$.ajax({url:spaces,
      			dataType: 'json',
@@ -4590,16 +4589,18 @@ function getFollowers(spaceId) {
 				var jsonResponseCleaned  = $.parseJSON(jsonResponse);
 				
 				if (jsonResponseCleaned.id == "2407") {
+					alert("inside");
+					isFollower="true";
+					
 				} else  {
 					
-					return;
+					isFollower="false";
 				}
 		
 			}
  		});
 	});
-	alert(isFollowed);
-	return isFollowed;
+	
 }
 
 $("#displaygraph").click(function() {
