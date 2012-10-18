@@ -4554,7 +4554,7 @@ $("input[type='radio']").change(function () {
 					for(var i = 0 ; i < spaces.length ; i ++)
 					{
 						isFollower = getFollowers(spaces[i].id);
-						
+						alert(isFollower);
 						if (isFollower == "true"){
 							html += "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
 			         		}
@@ -4587,12 +4587,12 @@ function getFollowers(spaceId) {
 			var jsonResponse = XMLHttpRequest.responseText;
 				jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
 				var jsonResponseCleaned  = $.parseJSON(jsonResponse);
-				alert(jsonResponseCleaned.id );
+				
 				if (jsonResponseCleaned.id == "2407") {
-					alert("true");
+					
 					return "true";
 				} else  {
-					alert("false");
+					
 					return "false";
 				}
 		
