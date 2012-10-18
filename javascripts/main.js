@@ -4584,14 +4584,13 @@ function getFollowers(spaceId) {
     		 	},
 			error: function(XMLHttpRequest, textStatus, errorThrown) {
 	
-				var jsonResponse = XMLHttpRequest.responseText;
+			var jsonResponse = XMLHttpRequest.responseText;
+				alert(jsonResponse);
 				jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
 				var jsonResponseCleaned  = $.parseJSON(jsonResponse);
 		
 				alert(jsonResponseCleaned);
-				alert(errorThrown);
-				alert(jsonResponseCleaned.id);
-
+				
 				return "true";
 			}
  		});
