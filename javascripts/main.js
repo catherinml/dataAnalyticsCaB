@@ -4590,18 +4590,16 @@ function getFollowers(spaceId) {
 				var jsonResponseCleaned  = $.parseJSON(jsonResponse);
 				
 				if (jsonResponseCleaned.id == "2407") {
-					alert("inside");
-					isFollowed="true";
-					alert(isFollowed);
+																	isFollowed="true";
 				} else  {
-					
+					alert(isFollowed);
 					isFollowed="false";
 				}
 		
 			}
  		});
 	});
-	alert(isFollowed);
+	alert("fdsf:"+isFollowed)
 	return isFollowed;
 }
 
