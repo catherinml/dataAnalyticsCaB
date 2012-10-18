@@ -4589,7 +4589,7 @@ function getFollowers(spaceId,spaceName) {
 				if (jsonResponseCleaned.id == "2407") {
 					
 					
-					var html = "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
+					var html = "<option value=" + spaceId + ">" + spaceName + "</option>";
 					var currenthtml = $("#selectspace").html();
 					alert(currenthtml);
 					$("#selectspace").html(currenthtml+ html);
