@@ -4590,6 +4590,7 @@ function getFollowers(spaceId) {
 				var jsonResponseCleaned  = $.parseJSON(jsonResponse);
 		
 				alert(jsonResponseCleaned);
+				alert(jsonResponseCleaned.id);
 				
 				return "true";
 			}
