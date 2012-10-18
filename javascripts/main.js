@@ -4589,7 +4589,7 @@ function getFollowers(spaceId) {
 				var jsonResponseCleaned  = $.parseJSON(jsonResponse);
 				
 				if (jsonResponseCleaned.id == "2407") {
-					alert("inside");
+					
 					isFollower="true";
 					
 				} else  {
