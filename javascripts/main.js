@@ -4414,7 +4414,7 @@ $(document).ready(function(){
      type: 'GET',
 	beforeSend: function(xhr) {
                
-             xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==")
+           //  xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==")
             },
 	success:function(result){
     alert(result);
