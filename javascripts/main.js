@@ -4590,10 +4590,13 @@ function getFollowers(spaceId,spaceName) {
 					
 					
 					var html = "<option value=" + spaceId + ">" + spaceName + "</option>";
-					var currenthtml = $("#selectspace").html();
+					var currenthtml=$("#selectspace").html();
 					alert(currenthtml);
-					$("#selectspace").html(currenthtml+ html);
-					alert($("#selectspace").html(currenthtml+ html));
+					alert(""+html);
+					var finalHtml = currenthtml +html;
+					alert("Final Html"+finalHtml)
+					$("#selectspace").html(finalHtml);
+					alert($("#selectspace").html());
 
 				} 
 		
