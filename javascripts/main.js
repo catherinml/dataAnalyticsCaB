@@ -4554,12 +4554,8 @@ $("input[type='radio']").change(function () {
 					for(var i = 0 ; i < spaces.length ; i ++)
 					{
 						getFollowers(spaces[i].id,spaces[i].name);
-						
-
     					}
-					$('#selectspace').attr('multiple',false);	
-					$("#selectspace").html(html);
-  					  												gadgets.window.adjustHeight();
+					
 				}
 			} 
 		});
@@ -4591,12 +4587,13 @@ function getFollowers(spaceId,spaceName) {
 					
 					var html = "<option value=" + spaceId + ">" + spaceName + "</option>";
 					var currenthtml=$("#selectspace").html();
-					alert(currenthtml);
-					alert(""+html);
+					
 					var finalHtml = currenthtml +html;
-					alert("Final Html"+finalHtml)
+					$("#selectspace").css("display","block");
 					$("#selectspace").html(finalHtml);
-					alert($("#selectspace").html());
+					$('#selectspace').attr('multiple',false);	
+																	gadgets.window.adjustHeight();
+					
 
 				} 
 		
