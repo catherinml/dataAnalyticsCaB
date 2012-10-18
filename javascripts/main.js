@@ -4396,20 +4396,10 @@ var json = {"graphNodeDetails":
 });
 
  $("#selectspace").change(function() {
-/*$(document).ready(function() {
-	alert("hello");
-	$.ajax({
-		url:"http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
-		dataType: "json",
-		type: "Get",
-		success:function(result){
-			alert(result);
-    			
-  		}
-	});
-});*/
+
 $(document).ready(function(){
-  $.ajax({url:"/api/core/v2/spaces/2005/children",
+  var subSpaces = "/api/core/v2/spaces/"+$("#selectspace").val()+"/children";
+  $.ajax({url:subSpaces,
      dataType: 'json',
      type: 'GET',
 	beforeSend: function(xhr) {
@@ -4417,14 +4407,14 @@ $(document).ready(function(){
              xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==")
             },
 	success:function(result){
-    alert(result);
-  },
-error: function(XMLHttpRequest, textStatus, errorThrown) {
+     },
+	error: function(XMLHttpRequest, textStatus, errorThrown) {
 	
-	var jsonResponse = XMLHttpRequest.responseText;
-	jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
-	var jsonResponseCleaned  = $.parseJSON(jsonResponse);
-}
+		var jsonResponse = XMLHttpRequest.responseText;
+		jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
+		var jsonResponseCleaned  = $.parseJSON(jsonResponse);
+		alert(jsonResponseCleaned.data);
+	}
 });
 });
 });
@@ -4538,16 +4528,15 @@ $("#displaygraph").click(function() {
 	gadgets.window.adjustHeight();
 	
 
-			osapi.http.get({
-href: 'http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children'
+/*osapi.http.get({
+href: "http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",format: 'json'
 }).execute(function(response) {
-  alert(response.data);
 alert(response.error.message);
 //alert(response.content);
 
 });
 
- 
+ */
 
 });
 
