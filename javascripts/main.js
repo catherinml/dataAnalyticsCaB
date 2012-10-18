@@ -4426,7 +4426,7 @@ error: function(XMLHttpRequest, textStatus, errorThrown) {
 	alert("responseText");
 	alert(XMLHttpRequest.responseText);
 	var jsonResponse = XMLHttpRequest.responseText;
-	jsonResponse.replace(/^throw [^;]*;/, '');
+	jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
 	alert(jsonResponse);
 	var jsonResponseCleaned  = $.parseJSON(jsonResponse);
 	alert(jsonResponseCleaned );
