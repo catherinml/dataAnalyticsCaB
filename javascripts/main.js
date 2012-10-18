@@ -4570,7 +4570,7 @@ $("input[type='radio']").change(function () {
     });
 
 function getFollowers(spaceId) {
-	
+	var isFollowed="true";
 	$(document).ready(function(){
 		  var spaces = "/api/core/v2/spaces/"+spaceId+"/followers/2407";
   		$.ajax({url:spaces,
@@ -4590,16 +4590,15 @@ function getFollowers(spaceId) {
 				var jsonResponseCleaned  = $.parseJSON(jsonResponse);
 				
 				if (jsonResponseCleaned.id == "2407") {
-																	isFollowed="true";
 				} else  {
-					alert(isFollowed);
-					isFollowed="false";
+					
+					return;
 				}
 		
 			}
  		});
 	});
-	alert("fdsf:"+isFollowed);
+	alert(isFollowed);
 	return isFollowed;
 }
 
