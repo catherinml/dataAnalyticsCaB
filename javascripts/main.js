@@ -4396,8 +4396,7 @@ var json = {"graphNodeDetails":
 });
 
  $("#selectspace").change(function() {
-	alert($("#selectspace").val());
-	/*$(document).ready(function() {
+/*$(document).ready(function() {
 	alert("hello");
 	$.ajax({
 		url:"http://accenture-tle-uat.uat3.hosted.jivesoftware.com/api/core/v2/spaces/2005/children",
@@ -4421,13 +4420,17 @@ $(document).ready(function(){
     alert(result);
   },
 error: function(XMLHttpRequest, textStatus, errorThrown) {
-	alert(errorThrown);
-	alert(textStatus);
 	//errorThrown.replace(/^throw [^;]*;/, '');
 	alert(errorThrown);
     // var activities = $.parseJSON(errorThrown);
 	alert("responseText");
 	alert(XMLHttpRequest.responseText);
+	var jsonResponse = XMLHttpRequest.responseText;
+	jsonResponse.replace(/^throw [^;]*;/, '');
+	alert(jsonResponse);
+	var jsonResponseCleaned  = $.parseJSON(jsonResponse);
+	alert(jsonResponseCleaned );
+
 }
 });
 });
