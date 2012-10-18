@@ -4423,10 +4423,11 @@ $(document).ready(function(){
 error: function(XMLHttpRequest, textStatus, errorThrown) {
 	alert(errorThrown);
 	alert(textStatus);
-	errorThrown.replace(/^throw [^;]*;/, '');
+	//errorThrown.replace(/^throw [^;]*;/, '');
 	alert(errorThrown);
-     var activities = $.parseJSON(errorThrown);
-	alert(activities);
+    // var activities = $.parseJSON(errorThrown);
+	alert("responseText");
+	alert(XMLHttpRequest.responseText);
 }
 });
 });
