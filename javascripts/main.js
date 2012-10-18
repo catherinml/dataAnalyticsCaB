@@ -4537,6 +4537,7 @@ $("input[type='radio']").change(function () {
 	}
 	
 	else if (typeID == "@self" && grouporspace =="space" ) {
+		$("#grouptable").css("display","none");
 
 		osapi.jive.core.spaces.get({contextId: "@viewer", contextType: "@person"}).execute(function(response) {
 			
