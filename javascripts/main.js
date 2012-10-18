@@ -4498,11 +4498,11 @@ $("input[type='radio']").change(function () {
 			} 
 		});
 	} // end else if
-	else if (typeID == "@selected"  && grouporspace =="group"){
+	else if (typeID == "@all"  && grouporspace =="group"){
 		$("#grouptable").css("display","none");
 		$("#spacetable").css("display","none");
 	}
-	else if (typeID == "@self" && grouporspace =="space" ) {
+	else if (typeID == "@selected" && grouporspace =="space" ) {
 
 	$("#grouptable").css("display","none");
 
