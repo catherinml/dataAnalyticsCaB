@@ -4554,7 +4554,7 @@ $("input[type='radio']").change(function () {
 					for(var i = 0 ; i < spaces.length ; i ++)
 					{
 						isFollower = getFollowers(spaces[i].id);
-						alert(isFollower)
+						
 						if (isFollower == "true"){
 							html += "<option value=" + spaces[i].id + ">" + spaces[i].name + "</option>";
 			         		}
@@ -4571,8 +4571,7 @@ $("input[type='radio']").change(function () {
 
 function getFollowers(spaceId) {
 	$(document).ready(function(){
-		alert(spaceId);
-  		var spaces = "/api/core/v2/spaces/"+spaceId+"/followers/2407";
+		  var spaces = "/api/core/v2/spaces/"+spaceId+"/followers/2407";
   		$.ajax({url:spaces,
      			dataType: 'json',
      			type: 'GET',
@@ -4581,18 +4580,20 @@ function getFollowers(spaceId) {
              			xhr.setRequestHeader("Authorization","Basic Y2F0aGVyaW5tbDpTMXR1cm4yMQ==")
             		},
 			success:function(result){
+				
     		 	},
 			error: function(XMLHttpRequest, textStatus, errorThrown) {
 	
 			var jsonResponse = XMLHttpRequest.responseText;
-				alert(jsonResponse);
 				jsonResponse = jsonResponse.replace(/^throw [^;]*;/, '');
 				var jsonResponseCleaned  = $.parseJSON(jsonResponse);
 		
-				alert(jsonResponseCleaned);
-				alert(jsonResponseCleaned.id);
-				
-				return "true";
+				if (jsonResponseCleaned.id) {
+					return "true";
+				} else  {
+					return "false";
+				}
+		
 			}
  		});
 	});
