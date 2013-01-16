@@ -1,6 +1,7 @@
 
 
 gadgets.util.registerOnLoadHandler(function() {
+alert("About to call---");
 
 	
 	$("#caSelectGroup").click(function() {
@@ -10,7 +11,7 @@ gadgets.util.registerOnLoadHandler(function() {
 				alert("inside callback");
 
     		}
-     			osapi.jive.core.places.requestPicker({success:callback, placeType: "group,space"});
+     			osapi.jive.core.places.requestPicker({success:callback, placeType: "space"});
 			
 	});
 gadgets.window.adjustHeight();
