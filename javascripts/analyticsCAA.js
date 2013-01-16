@@ -21,15 +21,9 @@ gadgets.window.adjustHeight();
 });
 
 	function getPlaceFromResponse(response) {
-		 alert("response length" + response.data);
+		 alert("response length" + gadgets.json.stringify(response));
 		  var places = [];
-		 if (response.data instanceof Array) {
-			alert("inside if");
-		    	places= response.data;
-		  } else {
-			alert("inside else");
-			places.push(response.data);
-		  }
+		
 		  return places;
 	}
 	
