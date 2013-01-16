@@ -21,7 +21,7 @@ gadgets.window.adjustHeight();
 	function getPlaceFromResponse(response) {
 		 alert(response.data);
 		  var places = [];
-		  if(response.data instanceof osapi.jive.corev3.places) {
+		  if(response.data instanceof osapi.jive.core.places) {
 		    	places.push(response.data);
 		  } else if (response.data instanceof Array) {
 		    	places= response.data;
