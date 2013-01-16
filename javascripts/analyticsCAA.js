@@ -21,7 +21,7 @@ gadgets.window.adjustHeight();
 });
 
 	function getPlaceFromResponse(response) {
-		 alert("response length" + gadgets.json.stringify(response));
+		 alert("response length" + response);
 		  var places = [];
 		
 		  return places;
