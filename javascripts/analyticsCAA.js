@@ -15,7 +15,7 @@ gadgets.util.registerOnLoadHandler(function() {
 function renderPlaceOnTable(place) {
 	var content = "";
      
-     content += "<p>"+ place.displayName + '</p><input type="hidden" value="'+place.id + '">'
+     content += "<p>"+ place.name + '</p><input type="hidden" value="'+place.id + '">'
      
 	return content ;
 }
