@@ -1,7 +1,7 @@
 
 
 gadgets.util.registerOnLoadHandler(function() {
-alert("About to call---");
+	alert("About to call---");
 
 	
 	$("#caSelectGroup").click(function() {
