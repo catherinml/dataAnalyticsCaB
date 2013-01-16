@@ -3,7 +3,9 @@ gadgets.util.registerOnLoadHandler(function() {
 		osapi.jive.corev3.places.requestPicker({
 			type : "group",
 			success : function(data) {
-				alert(gadgets.json.stringify(data).name);
+				var responseJson = gadgets.json.stringify(data);
+				alert(responseJson);
+				alert(responseJson.name);
 			}
 		});
 	});
