@@ -11,7 +11,7 @@ gadgets.util.registerOnLoadHandler(function() {
 
 $(document).ready(function(){
 	
-	var instanceURL = "https://sandbox.jiveon.com";
+	var instanceURL = "https://sandbox.jiveon.com/api/core/v3/";
 	$.ajax({
 		   
 		url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+data.resources.activity.ref+'&instanceURL='+instanceURL,
