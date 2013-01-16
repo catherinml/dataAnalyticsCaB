@@ -7,12 +7,12 @@ gadgets.util.registerOnLoadHandler(function() {
 		
     		var callback = function(response) {
 				
-
-	 			var places = getPlaceFromResponse(response);
-				alert("Places--" + places );
-      			var content = renderPlaceOnTable(places);
-				$("#caGroupName").html(content);
-				gadgets.window.adjustHeight();
+				alert("inside callback");
+	 			//var places = getPlaceFromResponse(response);
+				//alert("Places--" + places );
+      			//var content = renderPlaceOnTable(places);
+				//$("#caGroupName").html(content);
+				//gadgets.window.adjustHeight();
     		}
      			osapi.jive.core.places.requestPicker({success:callback, placeType: "group"});
 			
@@ -20,7 +20,7 @@ gadgets.util.registerOnLoadHandler(function() {
 gadgets.window.adjustHeight();
 });
 
-	function getPlaceFromResponse(response) {
+	/*function getPlaceFromResponse(response) {
 		 alert("response length" + response);
 		  var places = [];
 		
@@ -37,7 +37,7 @@ gadgets.window.adjustHeight();
     	}
 		return content ;
 	}
-
+*/
 
 
 
