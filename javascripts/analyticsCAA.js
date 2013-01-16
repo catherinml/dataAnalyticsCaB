@@ -8,7 +8,7 @@ var places = getPlaceFromResponse(response);
 $("#caGroupName").html(content);
 gadgets.window.adjustHeight();
      }
-      osapi.jive.corev3.places.requestPicker({success:callback, placeType: "group,space"});
+      osapi.jive.corev3.places.requestPicker({success:callback});
 });
 });
 
