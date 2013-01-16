@@ -5,7 +5,7 @@ gadgets.util.registerOnLoadHandler(function() {
 			success : function(data) {
 				var responseJson = gadgets.json.stringify(data);
 				alert(responseJson);
-				alert(responseJson.name);
+				alert(responseJson.type);
 			}
 		});
 	});
