@@ -14,7 +14,7 @@ $(document).ready(function(){
 	var instanceURL = "https://sandbox.jiveon.com";
 	$.ajax({
 		   
-		url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+content+'&instanceURL='+instanceURL,
+		url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+data.resources.activity.ref+'&instanceURL='+instanceURL,
 	    dataType: 'json',
 	    type: 'GET',
 	    success: function(result) {
