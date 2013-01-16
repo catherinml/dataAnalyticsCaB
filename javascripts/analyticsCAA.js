@@ -1,6 +1,11 @@
 gadgets.util.registerOnLoadHandler(function() {
 	$("#caSelectGroup").click(function() {
-		alert("Clicked---");
+		osapi.jive.corev3.places.requestPicker({
+			type : "space",
+			success : function(data) {
+				alert(data);
+			}
+		});
 	});
 });
 
