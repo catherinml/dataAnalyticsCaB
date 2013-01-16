@@ -2,6 +2,8 @@
 
 gadgets.util.registerOnLoadHandler(function() {
 
+	alert("Hello");
+
 	$("#caSelectGroup").click(function() {
 		
     		var callback = function(response) {
