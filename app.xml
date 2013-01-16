@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module specificationVersion="1">
-  <ModulePrefs title="Accenture Team Collaboration Pattern"
-               description="Display the Team relationship within 			a jive container"
+  <ModulePrefs title="Data Analytics - CA"
+               description="Data Analytics - CA"
                author="Accenture"
                author_affiliation="Accenture"
                height="100">
@@ -17,10 +17,10 @@
 
 
   <!-- To begin development, remove the hello view and uncomment the home and canvas views below -->
-  <Content type="html" view="home,canvas" href="displayrelgraph.html" />  -->
+  <Content type="html" view="home,canvas" href="dataAnalyticsCaA.html" />  -->
 
 
-  <Content type="html" view="home" href="canvas.html" />
-  <Content type="html" view="canvas" href="displayrelgraph.html" />
+  <Content type="html" view="home" href="dataAnalyticsCaA.html" />
+  <Content type="html" view="canvas" href="dataAnalyticsCaA.html" />
 
 </Module>
