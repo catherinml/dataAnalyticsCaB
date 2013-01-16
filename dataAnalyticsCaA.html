@@ -1,152 +1,16 @@
-<!--New changes-->
 
-	<div id="mainbody">
+<script type="text/javascript" src="javascripts/analyticsCAA.js"></script>
+
+<div>
 	
-		<table border="0" width="100%">
-		<tr>
-		
-			<td width="15%">
-			<p align="right">
-			<input type="button" value="Display Graph" name="displaygraph" id="displaygraph" style="font:bold 13px serif;">
-			</td>
-			<td width="3%" ><p align="center"><div class="div"></div></td>
+<table border="1" width="50%">
+	<tr>
+		<td width="273">
+		<p align="center"><a id="caSelectGroup" href="./">Select group</a></td>
+		<td id="caGroupName" width="273">&nbsp;</td>
+	</tr>
 
-			<td><p align="left"> <input type="button" value="Relationship Data" name="getdata" id="getdata" style="font:bold 13px serif;"></td>
-		
+</table>
+<p>
 	
-		</tr>
-
-		</table>
-	</div>	
-		
-	
-<!-- End of changes -->
-
-	<div id="divjivegraph" style="display:none" >
-	<table border="0" width="80%">
-		<tr>
-			<td width="23%"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Select the type of relationship pattern:</span></td>
-			<td width="20%">
-				<select id="typeofrelationship" name="D2"  style='font:bold 13px serif;'>
-					<option value="" >--Select--</option>
-					<option value="@self">My Team</option>
-					<option value="@selected">Adjacent Teams</option>
-					<option value="@all">All Team</option>
-				</select></td>
-			<td width="3%" rowspan="2">&nbsp;</td>
-
-			<td rowspan="2">
-			<table border="0" width="100%" style="display:none" id="grouptable">
-				<tr>
-					<td width="35%"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Select the Group:</span></td>
-					<td width="50%" rowspan="2">
-						<select id="selectgroup"  name="D1" style='font:bold 13px serif;'>
-				 
-					</select><p>&nbsp;</td>
-				</tr>
-				<tr>
-					<td >&nbsp;</td>
-				</tr>
-			</table>
-			
-			<table border="0" width="100%" style="display:none" id="spacetable">
-				<tr>
-					<td width="35%"><select id="selectspace"  name="selectspace" style='font:bold 13px serif;'>
-				 
-					</select><p></td>
-					<td width="50%"> 
-						<select id="selectsubspaces"  name="selectsubspaces" style='font:bold 13px serif;display:none'>
-				 
-					</select>
-					</td>
-				</tr>
-				<tr>
-					<td >&nbsp;</td>
-				</tr>
-			</table>
-
-			</td>
-
-
-		</tr>
-		<tr>
-		<td id="tabletdrdgroup" style="display:none" colspan="2"><span style='font: bold 13px serif; color:#989898;'>&nbsp;<input type="radio" value="group" name="jivegroupspace" id="radiojivegroup" > Group &nbsp; <input type="radio" value="space" name="jivegroupspace" id="radiojivespace"> Space</span></td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-
-		</tr>
-		<tr>
-		<td colspan="4"> 
-			<p align="center"><input type="button" value="Load Graph" name="loadgraph" id="loadgraph" style="font:bold 13px serif;">
-		<td>
-		</tr>
-
-		</table>
-		</div>
-
-		<div id="chart"></div>
-
-
-
-		<div id="divjivedata" style="display:none" >
-		<table border="0" width="80%">
-		<tr>
-			<td width="23%"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Relationship From:</span></td>
-			<td width="20%">
-				<input type="button" value="Select User" name="fromnode" id="fromnode" style="font:bold 13px serif;">
-			</td>
-			<td width="3%" rowspan="2">&nbsp;</td>
-
-			<td width="23%"><span style='font: bold 13px serif; color:#989898;'>&nbsp;Relationship To:</span></td>
-			<td width="20%">
-				<input type="button" value="Select Users" name="tonode" id="tonode" style="font:bold 13px serif;">
-			</td>
-			
-			</td>
-
-
-		</tr>
-		<tr>
-		<td colspan="6"> 
-			<p align="center"><input type="button" value="Load Data" name="loaddata" id="loaddata" style="font:bold 13px serif;">
-		</td>
-		</tr>
-
-		</table>
-		</div>
-
-
-
-		<div id="graphdata"  style="display:none;" >
-			<p align="center">
-			<table border="0" width="10%" bgcolor="#C0C0C0">
-			<tr>
-
-				<td>
-					  <table border="0">
-    						<tbody id="user-from-content">
-    						</tbody>
-					  </table>
-				</td>
-
-				<td width="5%">
-					  <table border="0">
-    						<tbody id="user-to-content">
-    						</tbody>
-					  </table>
-
-				</td>
-				<td>
-					  <table border="0">
-    						<tbody id="contributionData">
-    						</tbody>
-					  </table>
-				</td>
-				
-			</tr>
-			</table>
-		</div>
-<script type="text/javascript" >
-	gadgets.window.adjustHeight();
-	
-</script>
+</div>
