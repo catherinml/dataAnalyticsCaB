@@ -3,9 +3,9 @@
 gadgets.util.registerOnLoadHandler(function() {
 
 	$("#caSelectGroup").click(function() {
-		alert("One");
+		
     		var callback = function(response) {
-				alert("Two");
+				
 
 	 			var places = getPlaceFromResponse(response);
       			var content = renderPlaceOnTable(places);
@@ -13,8 +13,9 @@ gadgets.util.registerOnLoadHandler(function() {
 				gadgets.window.adjustHeight();
     		}
      			osapi.jive.core.places.requestPicker({success:callback, placeType: "group"});
-			alert("Three");
+			
 	});
+gadgets.window.adjustHeight();
 });
 
 	function getPlaceFromResponse(response) {
