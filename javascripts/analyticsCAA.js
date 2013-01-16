@@ -2,8 +2,7 @@
 
 gadgets.util.registerOnLoadHandler(function() {
 
-	alert("Hello");
-
+	
 	$("#caSelectGroup").click(function() {
 		
     		var callback = function(response) {
@@ -22,7 +21,7 @@ gadgets.window.adjustHeight();
 });
 
 	function getPlaceFromResponse(response) {
-		 alert(response.data.name);
+		 alert("response length" + response.data.name);
 		  var places = [];
 		 if (response.data instanceof Array) {
 			alert("inside if");
