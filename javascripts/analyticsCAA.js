@@ -10,11 +10,12 @@ gadgets.util.registerOnLoadHandler(function() {
 				$("#caGroupName").html(content);
 				gadgets.window.adjustHeight();
     		}
-     			osapi.jive.core.places.requestPicker({success:callback, placeType: "@all"});
+     			osapi.jive.core.places.requestPicker({success:callback, placeType: "group"});
 	});
 });
 
 	function getPlaceFromResponse(response) {
+		 alert(response.data);
 		  var places = [];
 		  if(response.data instanceof osapi.jive.corev3.places) {
 		    	places.push(response.data);
