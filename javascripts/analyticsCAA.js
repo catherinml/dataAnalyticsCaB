@@ -22,7 +22,7 @@ gadgets.window.adjustHeight();
 });
 
 	function getPlaceFromResponse(response) {
-		 alert(response.data);
+		 alert(response.data.name);
 		  var places = [];
 		 if (response.data instanceof Array) {
 			alert("inside if");
