@@ -21,7 +21,7 @@ gadgets.window.adjustHeight();
 });
 
 	function getPlaceFromResponse(response) {
-		 alert("response length" + response.data.name);
+		 alert("response length" + response.data);
 		  var places = [];
 		 if (response.data instanceof Array) {
 			alert("inside if");
@@ -36,8 +36,7 @@ gadgets.window.adjustHeight();
 	function renderPlaceOnTable(places) {
 		 var place;
 		 var content = "";
-		 alert(places);
-		 alert(places.length);
+		
 		 for(var i = 0; i < places.length; i++) {
     		place = places[i];
     		content += "<p>"+ place.name + '</p><input type="hidden" value="'+place.id + '">'
