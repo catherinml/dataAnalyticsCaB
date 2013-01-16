@@ -24,12 +24,12 @@ gadgets.window.adjustHeight();
 	function getPlaceFromResponse(response) {
 		 alert(response.data);
 		  var places = [];
-		  if(response.data instanceof osapi.jive.core.Place) {
+		 if (response.data instanceof Array) {
 			alert("inside if");
-		    	places.push(response.data);
-		  } else if (response.data instanceof Array) {
-			alert("inside else");
 		    	places= response.data;
+		  } else {
+			alert("inside else");
+			places.push(response.data);
 		  }
 		  return places;
 	}
