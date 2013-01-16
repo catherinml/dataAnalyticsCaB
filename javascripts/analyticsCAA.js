@@ -10,6 +10,7 @@ gadgets.util.registerOnLoadHandler(function() {
 				
 
 	 			var places = getPlaceFromResponse(response);
+				alert("Places--" + places );
       			var content = renderPlaceOnTable(places);
 				$("#caGroupName").html(content);
 				gadgets.window.adjustHeight();
@@ -24,8 +25,10 @@ gadgets.window.adjustHeight();
 		 alert(response.data);
 		  var places = [];
 		  if(response.data instanceof osapi.jive.core.places) {
+			alert("inside if");
 		    	places.push(response.data);
 		  } else if (response.data instanceof Array) {
+			alert("inside else");
 		    	places= response.data;
 		  }
 		  return places;
