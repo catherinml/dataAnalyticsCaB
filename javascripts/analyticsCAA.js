@@ -5,7 +5,7 @@ gadgets.util.registerOnLoadHandler(function() {
 	
 					$.ajax({
 						   
-						url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url=https://sandbox.jiveon.com/api/core/v3/places/2706/activities&instanceURL=https://sandbox.jiveon.com/api/core/v3/',
+						url: 'http://echo.jsontest.com/key/value/one/two',
 					    dataType: 'json',
 					    type: 'GET',
 					    success: function(result) {
