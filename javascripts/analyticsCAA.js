@@ -10,7 +10,7 @@ gadgets.util.registerOnLoadHandler(function() {
 				//var responseJson = gadgets.json.stringify(data);
 				//getMostContributedData(data.resources.activity.ref);
 				
-				var instanceURL = "https://sandbox.jiveon.com/api/core/v3/";
+				var instanceURL = "https://sandbox.jiveon.com";
 		
 				$(document).ready(function(){
 	
