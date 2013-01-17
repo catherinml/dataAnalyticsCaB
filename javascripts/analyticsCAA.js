@@ -55,7 +55,7 @@ gadgets.util.registerOnLoadHandler(function() {
 			content += "<td>" + '<a href="'+data.objectURL+'">' + data.objectName + '</a> </td>';
 			content += "</tr>";
 		}
-	
+		alert(content);
 		$("#user-ca-content").html(content);
 	}
 	
