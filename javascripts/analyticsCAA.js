@@ -28,10 +28,12 @@ gadgets.util.registerOnLoadHandler(function() {
 			    dataType: 'json',
 			    type: 'GET',
 			    success: function(result) {
-			       
+			       			alert("success");
 			       	        displayCAData(result.data);
 			       	        			    },
 			    error: function(XMLHttpRequest, textStatus, errorThrown) {
+						    alert("error");
+
 			    			alert(errorThrown); 	
 			    }
 			});
