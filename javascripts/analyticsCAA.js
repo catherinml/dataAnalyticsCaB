@@ -17,14 +17,14 @@ gadgets.util.registerOnLoadHandler(function() {
 	
 					$.ajax({
 						   
-						//url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+data.resources.activity.ref+'&instanceURL='+instanceURL+'&callback=',
+						url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+data.resources.activity.ref+'&instanceURL='+instanceURL,
 						//url:'https://ajax.googleapis.com/ajax/services/search/books?v=1.0&q=jquery',
-						url:'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url=https://sandbox.jiveon.com/api/core/v3/places/2706/activities&instanceURL=https://sandbox.jiveon.com/api/core/v3/',
+						//url:'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url=https://sandbox.jiveon.com/api/core/v3/places/2706/activities&instanceURL=https://sandbox.jiveon.com/api/core/v3/',
 					    dataType: 'jsonp',
 					    type: 'GET',
 					    crossDomain:true,
 					    success: function(result) {
-					       			alert("success");
+					       			alert("success"+result.data);
 					       	        //displayCAData(result.data);
 					    },
 					    error: function(xhr,err) {
