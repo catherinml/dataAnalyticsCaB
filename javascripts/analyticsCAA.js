@@ -25,7 +25,7 @@ gadgets.util.registerOnLoadHandler(function() {
 					       	        //displayCAData(result.data);
 					       	        			    },
 					    error: function(XMLHttpRequest, textStatus, errorThrown) {
-								    alert("error" + textStatus + "   : " + XMLHttpRequest);
+								    alert("error" + textStatus + "   : " + XMLHttpRequest.responseText);
 		
 					    			alert(errorThrown); 	
 					    }
