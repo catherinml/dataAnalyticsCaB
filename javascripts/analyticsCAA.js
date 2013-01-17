@@ -32,7 +32,7 @@ gadgets.util.registerOnLoadHandler(function() {
 			       	        displayCAData(result.data);
 			       	        			    },
 			    error: function(XMLHttpRequest, textStatus, errorThrown) {
-						    alert("error");
+						    alert("error" + textStatus);
 
 			    			alert(errorThrown); 	
 			    }
