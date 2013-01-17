@@ -52,7 +52,7 @@ gadgets.util.registerOnLoadHandler(function() {
 			//url='/CollaborativeAwarenessApp/collabaware/ca/recent?url='+typeID+'&instanceURL='+instanceURL;
 			url='http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/recent/jsonP?url='+activityUrl+'&instanceURL='+instanceURL;
 		}
-		alert(url);
+		
 		$.ajax({
 		    url: url,
 			dataType: 'jsonp',
