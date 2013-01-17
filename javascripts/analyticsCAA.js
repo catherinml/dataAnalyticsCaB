@@ -17,17 +17,17 @@ gadgets.util.registerOnLoadHandler(function() {
 	
 					$.ajax({
 						   
-						url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+data.resources.activity.ref+'&instanceURL='+instanceURL,
-					    dataType: 'json',
+						url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+data.resources.activity.ref+'&instanceURL='+instanceURL+'&callback=',
+					    dataType: 'jsonp',
 					    type: 'GET',
+					    crossDomain:true,
 					    success: function(result) {
 					       			alert("success");
 					       	        //displayCAData(result.data);
 					    },
-					    error: function(XMLHttpRequest, textStatus, errorThrown) {
-								    alert("error" + textStatus + "   : " + XMLHttpRequest.responseText);
-		
-					    			alert(errorThrown); 	
+					    error: function(xhr,err) {
+								    alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\nresponseText: "+xhr.responseText);
+					    			alert(err); 	
 					    }
 					});
 				});
