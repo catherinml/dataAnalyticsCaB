@@ -1,5 +1,6 @@
 gadgets.util.registerOnLoadHandler(function() {
 	$("#caSelectGroup").click(function() {
+		loadingImage();
 		osapi.jive.corev3.places.requestPicker({
 			type : "group",
 			success : function(data) {
@@ -38,7 +39,7 @@ gadgets.util.registerOnLoadHandler(function() {
 	
 	$("input[type='radio']").change(function () {
 
-		
+		loadingImage();
 		var recentormost = $(this).val();
 		var typeID = $("#selectgroup").val();
 		var url;
@@ -58,6 +59,7 @@ gadgets.util.registerOnLoadHandler(function() {
 		       
 		       	        displayCAData(result.data);
 		       	        gadgets.window.adjustHeight();
+		       	        $("#cadata").css("display","block");
 
 		    },
 		    error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -123,4 +125,13 @@ gadgets.util.registerOnLoadHandler(function() {
 	     content += "<p>"+ place.name + '</p><input type="hidden" value="'+place.id + '">'
 	     
 		return content ;
+	}
+	
+	function loadingImage() {
+		var content="";
+		content += "<tr>";
+		
+		content += '<td style="text-align:center;">' + '<img src="ajax-loader.gif" /> </td>';
+		content += "</tr>";
+		$("#user-ca-content").html(content);
 	}
