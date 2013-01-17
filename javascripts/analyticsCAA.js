@@ -42,7 +42,6 @@ gadgets.util.registerOnLoadHandler(function() {
 
 		loadingImage();
 		var recentormost = $(this).val();
-		alert(recentormost);
 		var url;
 		if (recentormost=="main") {
 			url='http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+activityUrl+'&instanceURL='+instanceURL;
@@ -52,7 +51,7 @@ gadgets.util.registerOnLoadHandler(function() {
 			url='http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/recent/jsonP?url='+activityUrl+'&instanceURL='+instanceURL;
 		}
 		$.ajax({
-		   
+		    url: url,
 			dataType: 'jsonp',
 			type: 'GET',
 			crossDomain:true,
