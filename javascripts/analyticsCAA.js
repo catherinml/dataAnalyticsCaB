@@ -1,26 +1,38 @@
 gadgets.util.registerOnLoadHandler(function() {
 	$("#caSelectGroup").click(function() {
-		$(document).ready(function(){
-					var query = 'jquery';
+		osapi.jive.corev3.places.requestPicker({
+			type : "group",
+			success : function(data) {
+				alert(data.resources.activity.ref);
+				alert(gadgets.json.stringify(data));
+				var content = renderPlaceOnTable(data);
+				$("#caGroupName").html(content);
+				//var responseJson = gadgets.json.stringify(data);
+				//getMostContributedData(data.resources.activity.ref);
+				
+				var instanceURL = "https://sandbox.jiveon.com/api/core/v3/";
+		
+				$(document).ready(function(){
+	
 	
 					$.ajax({
 						   
-						url: 'https://ajax.googleapis.com/ajax/services/search/books?v=1.0&q='+query,
-					    dataType: 'jsonp',
+						url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+data.resources.activity.ref+'&instanceURL='+instanceURL,
+					    dataType: 'json',
 					    type: 'GET',
-					    crossDomain:true,
 					    success: function(result) {
 					       			alert("success");
 					       	        //displayCAData(result.data);
 					    },
-					    error: function(xhr,err) {
-								    alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\nresponseText: "+xhr.responseText);
+					    error: function(XMLHttpRequest, textStatus, errorThrown) {
+								    alert("error" + textStatus + "   : " + XMLHttpRequest.responseText);
 		
-					    			alert(err); 	
+					    			alert(errorThrown); 	
 					    }
 					});
 				});
-
+			}
+		});
 	});
 });
 
