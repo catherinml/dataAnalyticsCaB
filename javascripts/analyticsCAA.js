@@ -113,6 +113,8 @@ gadgets.util.registerOnLoadHandler(function() {
 					
 					displayCAData(result.data);
 					gadgets.window.adjustHeight();
+					$("#cadata").css("display","block");
+
 
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
