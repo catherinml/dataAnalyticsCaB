@@ -73,7 +73,7 @@ gadgets.util.registerOnLoadHandler(function() {
 				type: 'GET',
 				crossDomain:true,
 				success: function(result) {
-				
+					alert(gadgets.json.stringify(result));
 					displayCAData(result.data);
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
