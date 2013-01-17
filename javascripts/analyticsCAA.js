@@ -5,7 +5,7 @@ gadgets.util.registerOnLoadHandler(function() {
 	
 					$.ajax({
 						   
-						url: 'https://ajax.googleapis.com/ajax/services/search/books?v=1.0&q=' + query;',
+						url: 'https://ajax.googleapis.com/ajax/services/search/books?v=1.0&q='+query,
 					    dataType: 'jsonp',
 					    type: 'GET',
 					    crossDomain:true,
