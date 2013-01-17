@@ -1,3 +1,4 @@
+var instanceURL = "https://sandbox.jiveon.com/api/core/v3/";
 gadgets.util.registerOnLoadHandler(function() {
 	$("#caSelectGroup").click(function() {
 		loadingImage();
@@ -94,7 +95,7 @@ gadgets.util.registerOnLoadHandler(function() {
 
 
 	function getMostContributedData(activityUrl) {
-		var instanceURL = "https://sandbox.jiveon.com/api/core/v3/";
+	
 		
 		$(document).ready(function(){
 
