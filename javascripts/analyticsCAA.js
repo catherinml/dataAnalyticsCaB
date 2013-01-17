@@ -18,7 +18,8 @@ gadgets.util.registerOnLoadHandler(function() {
 					$.ajax({
 						   
 						//url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+data.resources.activity.ref+'&instanceURL='+instanceURL+'&callback=',
-						url:'https://ajax.googleapis.com/ajax/services/search/books?v=1.0&q=jquery',
+						//url:'https://ajax.googleapis.com/ajax/services/search/books?v=1.0&q=jquery',
+						url:'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url=https://sandbox.jiveon.com/api/core/v3/places/2706/activities&instanceURL=https://sandbox.jiveon.com/api/core/v3/&callback=',
 					    dataType: 'jsonp',
 					    type: 'GET',
 					    crossDomain:true,
