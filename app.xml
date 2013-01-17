@@ -20,7 +20,7 @@
   <Content type="html" view="home,canvas" href="dataAnalyticsCaA.html" />  -->
 
 
-  <Content type="html" view="home" href="dataAnalyticsCaA.html" />
-  <Content type="html" view="canvas" href="dataAnalyticsCaA.html" />
+  <Content type="html" preferred_height="400" view="home" href="dataAnalyticsCaA.html" />
+  <Content type="html" preferred_height="400" view="canvas" href="dataAnalyticsCaA.html" />
 
 </Module>

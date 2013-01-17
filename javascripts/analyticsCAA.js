@@ -3,8 +3,7 @@ gadgets.util.registerOnLoadHandler(function() {
 		osapi.jive.corev3.places.requestPicker({
 			type : "group",
 			success : function(data) {
-				alert(data.resources.activity.ref);
-				alert(gadgets.json.stringify(data));
+				
 				var content = renderPlaceOnTable(data);
 				$("#caGroupName").html(content);
 				//var responseJson = gadgets.json.stringify(data);
@@ -36,6 +35,38 @@ gadgets.util.registerOnLoadHandler(function() {
 			}
 		});
 	});
+	
+	$("input[type='radio']").change(function () {
+
+		
+		var recentormost = $(this).val();
+		var typeID = $("#selectgroup").val();
+		var url;
+		if (recentormost=="main") {
+			url='http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+activityUrl+'&instanceURL='+instanceURL;
+		//	url='/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+typeID+'&instanceURL='+instanceURL;
+		} else if (recentormost=="recent") {
+			//url='/CollaborativeAwarenessApp/collabaware/ca/recent?url='+typeID+'&instanceURL='+instanceURL;
+			url='http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/recent/jsonP?url='+activityUrl+'&instanceURL='+instanceURL;
+		}
+		$.ajax({
+		   
+			dataType: 'jsonp',
+			type: 'GET',
+			crossDomain:true,
+		    success: function(result) {
+		       
+		       	        displayCAData(result.data);
+		       	        gadgets.window.adjustHeight();
+
+		    },
+		    error: function(XMLHttpRequest, textStatus, errorThrown) {
+		    			alert(errorThrown); 	
+		    }
+		});
+		
+	});
+	
 });
 
 	function displayCAData(data) {
@@ -73,9 +104,11 @@ gadgets.util.registerOnLoadHandler(function() {
 				type: 'GET',
 				crossDomain:true,
 				success: function(result) {
-					alert(gadgets.json.stringify(result));
+					
 					
 					displayCAData(result.data);
+					gadgets.window.adjustHeight();
+
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
 					alert(errorThrown);
