@@ -42,7 +42,7 @@ gadgets.util.registerOnLoadHandler(function() {
 
 		loadingImage();
 		var recentormost = $(this).val();
-		var typeID = $("#selectgroup").val();
+		alert(recentormost);
 		var url;
 		if (recentormost=="main") {
 			url='http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+activityUrl+'&instanceURL='+instanceURL;
