@@ -17,7 +17,7 @@ gadgets.util.registerOnLoadHandler(function() {
 	
 					$.ajax({
 						   
-						url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+data.resources.activity.ref+'&instanceURL='+instanceURL+'&callback=',
+						url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+data.resources.activity.ref+'&instanceURL='+instanceURL+'&callback=',
 					    dataType: 'jsonp',
 					    type: 'GET',
 					    crossDomain:true,
