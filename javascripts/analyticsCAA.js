@@ -10,6 +10,7 @@ gadgets.util.registerOnLoadHandler(function() {
 				$("#caGroupName").html(content);
 				//var responseJson = gadgets.json.stringify(data);
 				getMostContributedData(data.resources.activity.ref);
+				$("#hidActivityUrl").val(data.resources.activity.ref);
 				
 				/*var instanceURL = "https://sandbox.jiveon.com/api/core/v3/";
 		
@@ -42,6 +43,7 @@ gadgets.util.registerOnLoadHandler(function() {
 
 		loadingImage();
 		var recentormost = $(this).val();
+		var activityUrl = $("#hidActivityUrl").val();
 		var url;
 		if (recentormost=="main") {
 			url='http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+activityUrl+'&instanceURL='+instanceURL;
