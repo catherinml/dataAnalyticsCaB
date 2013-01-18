@@ -137,7 +137,7 @@ gadgets.util.registerOnLoadHandler(function() {
 		var content="";
 		content += "<tr>";
 		
-		content += '<td style="text-align:center;">' + '<img src="../images/ajax-loader.gif" /> </td>';
+		content += '<td style="text-align:center;">' + '<img src="images/ajax-loader.gif" /> </td>';
 		content += "</tr>";
 		$("#user-ca-content").html(content);
 	}
