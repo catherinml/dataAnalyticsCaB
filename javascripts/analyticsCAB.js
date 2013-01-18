@@ -73,7 +73,7 @@ gadgets.util.registerOnLoadHandler(function() {
 				content += '</td>';
 				content += '</tr>';
 				
-				content += '<tr style="height:5px;">';
+				content += '<tr style="height:3px;">';
 				content += '<td>';
 				content += '</td>';
 				content += '</tr>';
