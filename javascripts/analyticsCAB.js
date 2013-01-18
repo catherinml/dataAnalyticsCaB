@@ -176,7 +176,7 @@ gadgets.util.registerOnLoadHandler(function() {
 		
 		content += '<td align="center">' + '<img src="https://raw.github.com/catherinml/dataAnalyticsCaB/master/images/ajax-loader.gif" /> </td>';
 		content += "</tr>";
-		$("#user-ca-content").html(content);
+		$("#user-capb-content").html(content);
 	}
 	
 	function displayUsersInWidgetB(index){
