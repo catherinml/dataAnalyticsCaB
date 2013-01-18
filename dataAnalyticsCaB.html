@@ -1,5 +1,6 @@
 
 <script type="text/javascript" src="javascripts/analyticsCAB.js"></script>
+<script type="text/javascript" src="javascripts/jquery.lightbox_me.js"></script>
   <style type="text/css"> 
 	circle.node {
 	  stroke: #fff;
@@ -54,25 +55,12 @@
 	<br>
 		<div align="center">
 		<div id="cadata" style="display:none">
-			<table width="30%" border="0" >
-				<tr>	
-					<td width="60%">
-						<input type="radio" name="cawidgetatype_sml" id="cawidgetatype_sml_main" value="main" checked="checked"   /><strong> Most frequently worked on</strong>&nbsp;&nbsp; 
-					</td>
-					<td>
-						<input type="radio" name="cawidgetatype_sml" id="cawidgetatype_sml_recent" value="recent"   /> <strong>Recent </strong>
-					</td>
-				</tr>
-				<tr>
-				<td colspan="2">
-					<table border="0" width="100%" bgcolor="#F6F7F8">
-						<tbody id="user-ca-content">
-    					</tbody>
-					</table>			
-				</td>
-				</tr>
-			</table>
+				<table border="0" width="50%" bgcolor="#F6F7F8">
+					<tbody id="user-capb-content">
+    				</tbody>
+				</table>
 		</div>
+		<div id="modal-getcapbusers" class="jive-modal jive-modal-customize-layout" style="display: none;"></div>
 		</div>
 		<input type="hidden" id="hidActivityUrl" />
 	

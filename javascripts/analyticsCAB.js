@@ -13,88 +13,128 @@ gadgets.util.registerOnLoadHandler(function() {
 				getMostContributedData(data.resources.activity.ref);
 				$("#hidActivityUrl").val(data.resources.activity.ref);
 				
-				/*var instanceURL = "https://sandbox.jiveon.com/api/core/v3/";
-		
-				$(document).ready(function(){
-	
-	
-					$.ajax({
-						   
-						url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+data.resources.activity.ref+'&instanceURL='+instanceURL,
-						//url:'https://ajax.googleapis.com/ajax/services/search/books?v=1.0&q=jquery',
-						//url:'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url=https://sandbox.jiveon.com/api/core/v3/places/2706/activities&instanceURL=https://sandbox.jiveon.com/api/core/v3/',
-					    dataType: 'jsonp',
-					    type: 'GET',
-					    crossDomain:true,
-					    success: function(result) {
-					       			alert("success"+result.data);
-					       	        //displayCAData(result.data);
-					    },
-					    error: function(xhr,err) {
-								    alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\nresponseText: "+xhr.responseText);
-					    			alert(err); 	
-					    }
-					});
-				});*/
 			}
 		});
 	});
 	
-	$("input[type='radio']").change(function () {
-
-		loadingImage();
-		var recentormost = $(this).val();
-		var activityUrl = $("#hidActivityUrl").val();
-		var url;
-		if (recentormost=="main") {
-			url='http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+activityUrl+'&instanceURL='+instanceURL;
-		//	url='/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+typeID+'&instanceURL='+instanceURL;
-		} else if (recentormost=="recent") {
-			//url='/CollaborativeAwarenessApp/collabaware/ca/recent?url='+typeID+'&instanceURL='+instanceURL;
-			url='http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/recent/jsonP?url='+activityUrl+'&instanceURL='+instanceURL;
-		}
-		
-		$.ajax({
-		    url: url,
-			dataType: 'jsonp',
-			type: 'GET',
-			crossDomain:true,
-		    success: function(result) {
-		       
-		       	        displayCAData(result.data);
-		       	       // gadgets.window.adjustHeight();
-		       	        $("#cadata").css("display","block");
-
-		    },
-		    error: function(XMLHttpRequest, textStatus, errorThrown) {
-		    			alert(errorThrown); 	
-		    }
-		});
-		
-	});
+	
 	
 });
 
-	function displayCAData(data) {
+	function displayCBData(data) {
 		var content="";
-		
+		var userSize = 0;
+		var userIndex ;
+			
 		if($.isArray(data)) {
 			for(var i = 0; i < data.length; i++) {
-			
+				userSize = data[i].users.length;
 				content += "<tr>";
-				content += '<td width="5%"> ' + ' <a href="'+data[i].userProfileUrl+'">' + '<img height="45" width="45" src="' + data[i].avatarUrl + '"/> </a>' + '</td>';
-				content += '<td width="25%">' + '<a href="'+data[i].objectURL+'">' + data[i].objectName + '</a> </td>';
-				content += "</tr>";
+				content += '<td style="width:100%">';
+				content += '<div class="container" style="background:#CAD9EC;">';
+				content += '<b class="rtop"><b class="r1" style="background:#CAD9EC;"></b> <b class="r2" style="background:#CAD9EC;"></b> <b class="r3" style="background:#CAD9EC;"></b> <b class="r4" style="background:#CAD9EC;"></b></b>';
+				
+				content += '<table style="width:100%;">';
+				
+				content += "<tr>";
+				content += '<td rowspan="'+userSize+ '" style="margin-right:15px;">' + '<a href="'+data[i].contentURL+'"> <div style="font-size:'+getFontSize(data[i].users)+';">' + data[i].contentName + '</div></a> </td>';
+				userIndex = 0;
+				if ($.isArray(data[i].users)) {
+					for(var j = 0; j < userSize; j++) {
+
+						if (userIndex < 3 || userSize == 4 ) {
+							if (userIndex > 0) {
+								content += "<tr>";
+							}
+							content += '<td width="10%">' + '<a href="'+data[i].users[j].user.userProfileUrl+'">' + '<img height="45" width="45" src="' + data[i].users[j].user.avatarUrl + '"/> </a>' + '</td>';
+							content += "</tr>";
+							userIndex = userIndex + 1;
+						}
+						
+					}
+					if (userSize > 4 ) {
+						var userHTML = getUserDataHtml(data[i].users,i);
+						content += '<tr>'
+						content += '<td style="vertical-align:middle;">';
+						content += '<input type="button" value="......." name="moreUsers" id="moreUsers" style="width:45px;height:45px;" onclick="displayUsersInWidgetB('+i+');" data-id="divuser'+i+'" >';
+						content += userHTML;
+						content += '</td>'
+						content += "</tr>";
+					}
+					
+				} else {
+					content += '<td width="10%">'  + '<a href="'+data[i].users.user.userProfileUrl+'">' + '<img height="45" width="45" src="' + data[i].users.user.avatarUrl + '"/> </a>' + '</td>';
+					content += "</tr>";
+				}
+				content += '</table>';
+				content += '<b class="rbottom"><b class="r4" style="background:#d3d3d3;"></b> <b class="r3" style="background:#d3d3d3;"></b> <b class="r2" style="background:#d3d3d3;"></b> <b class="r1" style="background:#d3d3d3;"></b></b>';
+				content += '</div>';
+				content += '</td>';
+				content += '</tr>';
+				
+				content += '<tr style="height:5px;">';
+				content += '<td>';
+				content += '</td>';
+				content += '</tr>';
+	
 			}
-		} else {
+		}
+		else {
 			content += "<tr>";
-			content += '<td width="4%"> '+ ' <a href="'+data.userProfileUrl+'">' + '<div height="45" width="45" > <img height="45" width="45" src="' + data.avatarUrl + '"/></div> </a>' + '</td>';
-			content += '<td width="26%">' + '<a href="'+data.objectURL+'">' + data.objectName + '</a> </td>';
+			content += '<td style="width:100%">';
+			content += '<div class="container" style="background:#d3d3d3;">';
+			content += '<b class="rtop"><b class="r1" style="background:#d3d3d3;"></b> <b class="r2" style="background:#d3d3d3;"></b> <b class="r3" style="background:#d3d3d3;"></b> <b class="r4" style="background:#d3d3d3;"></b></b>';		
+			content += '<table style="width:100%;">';
+			
+			content += "<tr>";
+			content += '<td>' + '&nbsp;&nbsp;<a href="'+data.contentURL+'"> <div style="font-size:'+getFontSize("")+';">' + data.contentName + '</div></a> </td>';
+			content += "<td> " + '<a href="'+data.users.user.userProfileUrl+'">' + '<img height="45" width="45" src="' + data.users.user.avatarUrl + '"/> </a>' + '</td>';
 			content += "</tr>";
+			
+			content += '</table>';
+			content += '<b class="rbottom"><b class="r4" style="background:#d3d3d3;"></b> <b class="r3" style="background:#d3d3d3;"></b> <b class="r2" style="background:#d3d3d3;"></b> <b class="r1" style="background:#d3d3d3;"></b></b>';
+			content += '</div>';
+			content += '</td>';
+			content += '</tr>';
+		}
+	
+		$("#user-capb-content").html(content);
+	}
+
+	function getFontSize(userData) {
+		var fontSize = "12px";
+		if ($.isArray(userData)) {
+			if(userData.length > 3) {
+				fontSize = "20px";		
+			} else if (userData.length == 3) {
+				fontSize = "18px";	
+			} else if (userData.length = 2) {
+				fontSize = "15px";	
+			}
 		}
 		
-		$("#user-ca-content").html(content);
+		return fontSize;
 	}
+	
+	function getUserDataHtml(usersObj,index) {
+		
+ 		var html= "";
+ 		html += '<div id="div_modal-getusers_'+index +'" style="display: none;">';
+ 		html += '<header><h2>More Users</h2></header>';
+ 		html += '<a class="j-modal-close-top close" href="#">Close <span class="j-close-icon j-ui-elem"></span></a>';
+ 		html += '<div class="jive-modal-content clearfix">';
+ 		html += '<table> <tr>';
+ 		var usersize = usersObj.length; 
+ 		
+ 		for(var j = 0; j < usersize; j++) {
+ 			html +='<td style="vertical-align:middle;">';
+ 			html +='<a href="'+usersObj[j].user.userProfileUrl+'">' + '<img height="35" width="35" src="' + usersObj[j].user.avatarUrl + '"/> </a>';
+ 			html +='</td>';
+ 			html +='<td>&nbsp;</td>';	
+ 		}
+ 		html += '</tr></table></div>';
+ 		return html;		
+}
 
 
 	function getMostContributedData(activityUrl) {
@@ -105,14 +145,14 @@ gadgets.util.registerOnLoadHandler(function() {
 			$.ajax({
 			
 				//url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+activityUrl+'&instanceURL='+instanceURL,
-				url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed/jsonP?url='+activityUrl+'&instanceURL='+instanceURL,
+				url: 'http://svecas001:8090CollaborativeAwarenessApp/collabaware/cab/team/jsonP?url='+activityUrl+'&instanceURL='+instanceURL,
 				dataType: 'jsonp',
 				type: 'GET',
 				crossDomain:true,
 				success: function(result) {
 					
 					
-					displayCAData(result.data);
+					displayCBData(result.data);
 					
 					//gadgets.window.adjustHeight();
 					
@@ -141,4 +181,9 @@ gadgets.util.registerOnLoadHandler(function() {
 		content += '<td align="center">' + '<img src="https://raw.github.com/catherinml/dataAnalyticsCaA/master/images/ajax-loader.gif" /> </td>';
 		content += "</tr>";
 		$("#user-ca-content").html(content);
+	}
+	
+	function displayUsersInWidgetB(index){
+		var $divUserList = $('#div_modal-getusers_'+index).html();		
+		$("#modal-getcapbusers").html($divUserList).lightbox_me();
 	}
