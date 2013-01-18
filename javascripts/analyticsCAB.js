@@ -38,7 +38,7 @@ gadgets.util.registerOnLoadHandler(function() {
 				content += '<table style="width:100%;">';
 				
 				content += "<tr>";
-				content += '<td rowspan="'+userSize+ '" style="margin-right:15px;">' + '<a href="'+data[i].contentURL+'"> <div style="font-size:'+getFontSize(data[i].users)+';">' + data[i].contentName + '</div></a> </td>';
+				content += '<td rowspan="'+userSize+ '" style="margin-right:15px;">' + '&nbsp;&nbsp;<a href="'+data[i].contentURL+'"> <div style="font-size:'+getFontSize(data[i].users)+';">' + data[i].contentName + '</div></a> </td>';
 				userIndex = 0;
 				if ($.isArray(data[i].users)) {
 					for(var j = 0; j < userSize; j++) {
