@@ -82,14 +82,14 @@ gadgets.util.registerOnLoadHandler(function() {
 			for(var i = 0; i < data.length; i++) {
 			
 				content += "<tr>";
-				content += "<td> " + ' <a href="'+data[i].userProfileUrl+'">' + '<img height="45" width="45" src="' + data[i].avatarUrl + '"/> </a>' + '</td>';
-				content += "<td>" + '<a href="'+data[i].objectURL+'">' + data[i].objectName + '</a> </td>';
+				content += '<td width="5%"> ' + ' <a href="'+data[i].userProfileUrl+'">' + '<img height="45" width="45" src="' + data[i].avatarUrl + '"/> </a>' + '</td>';
+				content += '<td width="25%">' + '<a href="'+data[i].objectURL+'">' + data[i].objectName + '</a> </td>';
 				content += "</tr>";
 			}
 		} else {
 			content += "<tr>";
-			content += "<td> " + ' <a href="'+data.userProfileUrl+'">' + '<div height="45" width="45" > <img height="45" width="45" src="' + data.avatarUrl + '"/></div> </a>' + '</td>';
-			content += "<td>" + '<a href="'+data.objectURL+'">' + data.objectName + '</a> </td>';
+			content += '<td width="5%"> '+ ' <a href="'+data.userProfileUrl+'">' + '<div height="45" width="45" > <img height="45" width="45" src="' + data.avatarUrl + '"/></div> </a>' + '</td>';
+			content += '<td width="25%">' + '<a href="'+data.objectURL+'">' + data.objectName + '</a> </td>';
 			content += "</tr>";
 		}
 		
