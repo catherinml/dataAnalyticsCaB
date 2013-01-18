@@ -10,6 +10,7 @@ gadgets.util.registerOnLoadHandler(function() {
 				var content = renderPlaceOnTable(data);
 				$("#caGroupName").html(content);
 				//var responseJson = gadgets.json.stringify(data);
+				alert(gadgets.json.stringify(data));
 				getMostContributedData(data.resources.activity.ref);
 				$("#hidActivityUrl").val(data.resources.activity.ref);
 				
