@@ -1,21 +1,38 @@
 
 <script type="text/javascript" src="javascripts/analyticsCAB.js"></script>
 <script type="text/javascript" src="javascripts/jquery.lightbox_me.js"></script>
-  <style type="text/css"> 
-	circle.node {
-	  stroke: #fff;
-	  stroke-width: 1.5px;
+<style type="text/css" > 
+	.jive-widget-watchlabel {
+	    background: none repeat scroll 0 0 #F6F7F8;
+	    border-bottom: 1px dotted #BBBBBB;
+	    font-size: 0.9em;
+	    padding: 5px 10px;
 	}
-	
-	line.link {
-	  stroke: #999;
-	  stroke-opacity: .6;
+	.jive-widget {
+	    max-width: 400px;
 	}
-
-	#mainbody {
-    		background: url("images/formbk.png") repeat-x scroll left center #E9E9E9;
-    		border-bottom: 3px solid #CCCCCC;
-    		color: #333333;
+	.jive-widget:before {
+	   display: block;
+       line-height: 0;
+       content: "\'";
+	}
+	.jive-widget:after{
+    display: block;
+    line-height: 0;
+   
+    content: "\'";
+	}
+	table.center {
+	    width:40%; 
+	    margin-left:30%; 
+	    margin-right:30%;
+		border-color:#C0C0C0;
+		
+  }
+  	#mainbody {
+    		background: url("formbk.png") repeat-x scroll left center #CAD9EC;
+    		border-bottom: 3px solid #CAD9EC;
+    		color: #CAD9EC;
     		margin: 0;
     		padding: 3px;
 	}
@@ -26,7 +43,80 @@
     		margin: 5px;
     		width: 4px;
 	}
-  </style>
+	
+	.container {color:#fff; margin:0 2px;}
+	.rtop, .rbottom{
+	display:block;
+	background:#fff;
+	}
+	 .rtop *, .rbottom *{
+	display: block;
+	height: 1px;
+	overflow: hidden;
+	
+	}
+	 .r1{margin: 0 5px}
+	 .r2{margin: 0 3px}
+	 .r3{margin: 0 2px}
+	 .r4{
+	margin: 0 1px;
+	height: 2px
+	
+	}
+	
+	.jive-modal {
+    background: url("darkpopoverbg.png") repeat-x scroll left top rgba(16, 16, 16, 0.8);
+    border: 1px solid #333333;
+    border-radius: 7px 7px 7px 7px;
+    display: none;
+    padding: 0 7px 7px;
+}
+
+.jive-modal .j-modal-close-top {
+    color: white;
+    display: block;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    padding: 7px 14px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.jive-modal .j-close-icon {
+    background-position: -320px -35px;
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+    width: 19px;
+}
+
+
+.jive-modal-content {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #2E2E2E;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 15px 15px;
+    position: relative;
+}
+.clearfix {
+    min-height: 0;
+}
+.jive-modal header h2 {
+	color: white;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 1em;
+    padding: 8px 0 8px 7px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.j-ui-elem {
+    background: url("j-ui-sprite.png") no-repeat scroll -100% -100% transparent;
+} 
+
+</style>
 
 <div>
 	<div align="center">
