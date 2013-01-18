@@ -1,0 +1,79 @@
+
+<script type="text/javascript" src="javascripts/analyticsCAB.js"></script>
+  <style type="text/css"> 
+	circle.node {
+	  stroke: #fff;
+	  stroke-width: 1.5px;
+	}
+	
+	line.link {
+	  stroke: #999;
+	  stroke-opacity: .6;
+	}
+
+	#mainbody {
+    		background: url("images/formbk.png") repeat-x scroll left center #E9E9E9;
+    		border-bottom: 3px solid #CCCCCC;
+    		color: #333333;
+    		margin: 0;
+    		padding: 3px;
+	}
+	.div {
+    		border-right: 1px solid #AAAAAA;
+    		float: left;
+    		height: 30px;
+    		margin: 5px;
+    		width: 4px;
+	}
+  </style>
+
+<div>
+	<div align="center">
+
+	<div id="mainbody">
+	
+		<table border="0" width="30%">
+		<tr>
+		
+			<td width="15%">
+			<p align="right">
+			<input type="button" value="Select Place" name="caSelectGroup" id="caSelectGroup"  style="font:bold 13px serif;">
+			</td>
+			<td width="3%" ><p align="center"><div >&nbsp;&nbsp;</div></td>
+
+			<td id="caGroupName" width="273">&nbsp;</td>
+		
+	
+		</tr>
+
+		</table>
+	</div>	
+	</div>
+	
+
+	<br>
+		<div align="center">
+		<div id="cadata" style="display:none">
+			<table width="30%" border="0" >
+				<tr>	
+					<td width="60%">
+						<input type="radio" name="cawidgetatype_sml" id="cawidgetatype_sml_main" value="main" checked="checked"   /><strong> Most frequently worked on</strong>&nbsp;&nbsp; 
+					</td>
+					<td>
+						<input type="radio" name="cawidgetatype_sml" id="cawidgetatype_sml_recent" value="recent"   /> <strong>Recent </strong>
+					</td>
+				</tr>
+				<tr>
+				<td colspan="2">
+					<table border="0" width="100%" bgcolor="#F6F7F8">
+						<tbody id="user-ca-content">
+    					</tbody>
+					</table>			
+				</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+		<input type="hidden" id="hidActivityUrl" />
+	
+</div>

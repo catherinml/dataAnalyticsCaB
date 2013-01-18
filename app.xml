@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module specificationVersion="1">
-  <ModulePrefs title="Data Analytics - CA"
-               description="Data Analytics - CA"
+  <ModulePrefs title="Data Analytics - CA - What is this team working on?"
+               description="Data Analytics - CA - What is this team working on?"
                author="Accenture"
                author_affiliation="Accenture"
                height="100">
@@ -17,10 +17,10 @@
 
 
   <!-- To begin development, remove the hello view and uncomment the home and canvas views below -->
-  <Content type="html" view="home,canvas" href="dataAnalyticsCaA.html" />  -->
+  <Content type="html" view="home,canvas" href="dataAnalyticsCaB.html" />  -->
 
 
-  <Content type="html" preferred_height="400" view="home" href="dataAnalyticsCaA.html" />
-  <Content type="html" preferred_height="400" view="canvas" href="dataAnalyticsCaA.html" />
+  <Content type="html" preferred_height="400" view="home" href="dataAnalyticsCaB.html" />
+  <Content type="html" preferred_height="400" view="canvas" href="dataAnalyticsCaB.html" />
 
 </Module>
