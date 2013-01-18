@@ -6,7 +6,7 @@ gadgets.util.registerOnLoadHandler(function() {
 		osapi.jive.corev3.places.requestPicker({
 			type : "group",
 			success : function(data) {
-				
+				alert(gadgets.json.stringify(data));
 				var content = renderPlaceOnTable(data);
 				$("#caGroupName").html(content);
 				//var responseJson = gadgets.json.stringify(data);
@@ -88,8 +88,8 @@ gadgets.util.registerOnLoadHandler(function() {
 			}
 		} else {
 			content += "<tr>";
-			content += '<td width="5%"> '+ ' <a href="'+data.userProfileUrl+'">' + '<div height="45" width="45" > <img height="45" width="45" src="' + data.avatarUrl + '"/></div> </a>' + '</td>';
-			content += '<td width="25%">' + '<a href="'+data.objectURL+'">' + data.objectName + '</a> </td>';
+			content += '<td width="4%"> '+ ' <a href="'+data.userProfileUrl+'">' + '<div height="45" width="45" > <img height="45" width="45" src="' + data.avatarUrl + '"/></div> </a>' + '</td>';
+			content += '<td width="26%">' + '<a href="'+data.objectURL+'">' + data.objectName + '</a> </td>';
 			content += "</tr>";
 		}
 		
