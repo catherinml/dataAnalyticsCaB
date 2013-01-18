@@ -1,7 +1,7 @@
 var instanceURL = "https://sandbox.jiveon.com/api/core/v3/";
 gadgets.util.registerOnLoadHandler(function() {
 	$("#caSelectGroup").click(function() {
-		$("#cadata").css("display","block");
+		$("#capbdata").css("display","block");
 		loadingImage();
 		osapi.jive.corev3.places.requestPicker({
 			type : "group",
@@ -10,7 +10,7 @@ gadgets.util.registerOnLoadHandler(function() {
 				var content = renderPlaceOnTable(data);
 				$("#caGroupName").html(content);
 				//var responseJson = gadgets.json.stringify(data);
-				alert(gadgets.json.stringify(data));
+				//alert(gadgets.json.stringify(data));
 				getMostContributedData(data.resources.activity.ref);
 				$("#hidActivityUrl").val(data.resources.activity.ref);
 				
@@ -146,18 +146,13 @@ gadgets.util.registerOnLoadHandler(function() {
 			$.ajax({
 			
 				//url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/ca/mostcontributed?url='+activityUrl+'&instanceURL='+instanceURL,
-				url: 'http://svecas001:8090CollaborativeAwarenessApp/collabaware/cab/team/jsonP?url='+activityUrl+'&instanceURL='+instanceURL,
+				url: 'http://svecas001:8090/CollaborativeAwarenessApp/collabaware/cab/team/jsonP?url='+activityUrl+'&instanceURL='+instanceURL,
 				dataType: 'jsonp',
 				type: 'GET',
 				crossDomain:true,
 				success: function(result) {
-					
-					
-					displayCBData(result.data);
-					
-					//gadgets.window.adjustHeight();
-					
 
+					displayCBData(result.data);
 
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -179,7 +174,7 @@ gadgets.util.registerOnLoadHandler(function() {
 		var content="";
 		content += "<tr>";
 		
-		content += '<td align="center">' + '<img src="https://raw.github.com/catherinml/dataAnalyticsCaA/master/images/ajax-loader.gif" /> </td>';
+		content += '<td align="center">' + '<img src="https://raw.github.com/catherinml/dataAnalyticsCaB/master/images/ajax-loader.gif" /> </td>';
 		content += "</tr>";
 		$("#user-ca-content").html(content);
 	}
