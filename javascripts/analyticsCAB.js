@@ -57,7 +57,7 @@ gadgets.util.registerOnLoadHandler(function() {
 						var userHTML = getUserDataHtml(data[i].users,i);
 						content += '<tr>'
 						content += '<td style="vertical-align:middle;">';
-						content += '<input type="button" value="......." name="moreUsers" id="moreUsers" style="width:45px;height:45px;" onclick="displayUsersInWidgetB('+i+');" data-id="divuser'+i+'" >';
+						content += '<input type="button" value="......." name="moreUsers" id="moreUsers" style="width:40px;height:40px;" onclick="displayUsersInWidgetB('+i+');" data-id="divuser'+i+'" >';
 						content += userHTML;
 						content += '</td>'
 						content += "</tr>";
