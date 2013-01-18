@@ -1,6 +1,7 @@
 var instanceURL = "https://sandbox.jiveon.com/api/core/v3/";
 gadgets.util.registerOnLoadHandler(function() {
 	$("#caSelectGroup").click(function() {
+		$("#cadata").css("display","block");
 		loadingImage();
 		osapi.jive.corev3.places.requestPicker({
 			type : "group",
@@ -61,7 +62,7 @@ gadgets.util.registerOnLoadHandler(function() {
 		    success: function(result) {
 		       
 		       	        displayCAData(result.data);
-		       	        gadgets.window.adjustHeight();
+		       	       // gadgets.window.adjustHeight();
 		       	        $("#cadata").css("display","block");
 
 		    },
@@ -112,8 +113,8 @@ gadgets.util.registerOnLoadHandler(function() {
 					
 					
 					displayCAData(result.data);
-					$("#cadata").css("display","block");
-					gadgets.window.adjustHeight();
+					
+					//gadgets.window.adjustHeight();
 					
 
 
