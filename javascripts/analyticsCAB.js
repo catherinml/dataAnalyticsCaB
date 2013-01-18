@@ -47,7 +47,7 @@ gadgets.util.registerOnLoadHandler(function() {
 							if (userIndex > 0) {
 								content += "<tr>";
 							}
-							content += '<td width="10%">' + '<a href="'+data[i].users[j].user.userProfileUrl+'">' + '<img height="45" width="45" src="' + data[i].users[j].user.avatarUrl + '"/> </a>' + '</td>';
+							content += '<td width="10%">' + '<a href="'+data[i].users[j].user.userProfileUrl+'">' + '<img height="40" width="40" src="' + data[i].users[j].user.avatarUrl + '"/> </a>' + '</td>';
 							content += "</tr>";
 							userIndex = userIndex + 1;
 						}
@@ -64,7 +64,7 @@ gadgets.util.registerOnLoadHandler(function() {
 					}
 					
 				} else {
-					content += '<td width="10%">'  + '<a href="'+data[i].users.user.userProfileUrl+'">' + '<img height="45" width="45" src="' + data[i].users.user.avatarUrl + '"/> </a>' + '</td>';
+					content += '<td width="10%">'  + '<a href="'+data[i].users.user.userProfileUrl+'">' + '<img height="40" width="40" src="' + data[i].users.user.avatarUrl + '"/> </a>' + '</td>';
 					content += "</tr>";
 				}
 				content += '</table>';
