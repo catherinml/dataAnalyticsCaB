@@ -6,7 +6,7 @@ gadgets.util.registerOnLoadHandler(function() {
 		osapi.jive.corev3.places.requestPicker({
 			type : "group",
 			success : function(data) {
-				alert(gadgets.json.stringify(data));
+				
 				var content = renderPlaceOnTable(data);
 				$("#caGroupName").html(content);
 				//var responseJson = gadgets.json.stringify(data);
@@ -129,7 +129,7 @@ gadgets.util.registerOnLoadHandler(function() {
 	function renderPlaceOnTable(place) {
 		var content = "";
 	     
-	     content += ""+ place.name + '<input type="hidden" value="'+place.id + '">'
+	     content += '<a href="'+place.html.ref+'">'+ place.name + '</a><input type="hidden" value="'+place.id + '">'
 	     
 		return content ;
 	}
