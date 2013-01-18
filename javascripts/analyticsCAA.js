@@ -137,7 +137,7 @@ gadgets.util.registerOnLoadHandler(function() {
 		var content="";
 		content += "<tr>";
 		
-		content += '<td style="text-align:center;">' + '<img src="ajax-loader.gif" /> </td>';
+		content += '<td style="text-align:center;">' + '<img src="https://raw.github.com/catherinml/dataAnalyticsCaA/master/images/ajax-loader.gif" /> </td>';
 		content += "</tr>";
 		$("#user-ca-content").html(content);
 	}
